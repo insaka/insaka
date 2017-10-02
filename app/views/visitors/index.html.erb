@@ -1,2 +1,46 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<p><% link_to 'Admin', users_path %> </p>
+
+<header class="business-header">
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="col-6">
+            </div>
+            <div class="col-6 top-buffer">
+                <h1 class="tagline">Insaka</h1>
+                <h4 class="tagline">Helping rural Zambian girls finish school</h4>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container container-fluid">
+    <hr>
+    <div class="row text-blue container-fluid">
+        <div class="col-4 text-center">
+            <img class="img-circle img-responsive img-center" src="../images/IMG_9653_2.JPG" alt="Who We Are">
+             <h2> <%= link_to 'Who We Are', page_path('about') %> </h2>
+        </div>
+        <div class="col-4 text-center">
+            <img class="img-circle img-responsive img-center" src="../images/IMG_9542_2.JPG" alt="Why We Do It">
+            <h2> <%= link_to 'Why We Do It', page_path('transparency') %> </h2>
+        </div>
+        <div class="col-4 text-center">
+            <img class="img-circle img-responsive img-center" src="../images/IMG_9713_2.JPG" alt="How You Can Help">
+           <h2> <%= link_to 'How You Can Help', page_path('donate') %> </h2>
+        </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+    <!-- Footer -->
+<footer>
+    <div class="text-center col-12 blue container-fluid">
+        <h2> <%= button_to "Send Us a Bushnote", page_path('contact'), {class: 'button'} %> </h2>
+        <div class="row">
+        </div>
+        <hr>
+        <div>
+            <p>Copyright &copy; Insaka 2017 -- All Rights Reserved. </p>
+        </div>
+    </div>
+    <!-- /.row -->
+</footer>

@@ -1,7 +1,86 @@
-<% content_for :title do %>About<% end %>
-<h3>About the Website</h3>
-<p>
-This web application was created with
-<%= link_to('Rails Composer', 'http://railsapps.github.io/rails-composer/') %>
-from the <%= link_to('RailsApps project', 'http://railsapps.github.io/') %>.
-</p>
+<% content_for :title do %>About Us<% end %>
+<hr class="featurette-divider">
+<div class="row featurette">
+	<div class="col-md-7">
+		<h2 class="featurette-heading">Who We Are</h2>
+		<p class="lead">We are Insaka, a 501(c)(3) corporation dedicated to helping rural Zambian girls complete their education.
+			</br>
+			</br>
+			Insaka was formed after Kyle, its director, returned from serving in Peace Corps Zambia as an English teacher from 2015-2017 in the rural village of Mutwewankoko (Moot-way-wan-koko, which means Chicken Head) in Luapula.
+			</br>
+			</br>
+			The girls in Kyle's Grade 9 class who are smart and hardworking will not be able to continue their education beyond grade nine, because their parents cannot afford to send their daughters to secondary school. Without schooling, it will be very difficult for these girls to ever break out of the cycle of a quick marriage, raising around six children, and the neverending manual labor of a subsistence farmer's life.
+			</br>
+			</br>
+			That's not fair.
+			</br>
+			</br>
+			We have teamed up to help girls like them.
+			We have created Isaka to help these girls by promoting education. Their education will have positive ramifications for their lives and those of their families and villages.
+			</br>
+			</br>
+			Special Thanks </br>
+		Drew Uhlmann for the website creation and managment.</p>
+	</div>
+	<div class="col-md-5">
+		<img class="featurette-image img-fluid mx-auto" src="../images/kyle_and_sherrie.jpg" alt="who we are - a photo of kyle and sherrie">
+	</div>
+</div>
+<hr class="featurette-divider">
+<div class="row featurette">
+	<div class="col-md-7 order-md-2">
+		<h2 class="featurette-heading">What We Do</h2>
+		<p class="lead">The odds of a rural African girl going to secondary school are slim. There are too many obstacles in her way.
+			</br>
+			</br>
+			One of the largest obstacles is a lack of money. The average yearly income is around 200$ USD. Secondary school fees alone range from $250-$750 per year for three years. Most of these girls come from families of subsistence farmers. Few of their families have that much money, and even if they do, the money is much more likely to be spent educating the sons of the family, not the daughters.
+			</br>
+			</br>
+			Our goal is to help rural African girls complete their Grade 12 educations by assisting in the payment of their school fees.
+			</br>
+			</br>
+		Girls who choose to do so may apply for this help. It must be their choice. Our intention is to provide educational assistance for up to five girls a year so that we may ensure that the contributions go directly to where they are most needed.</p>
+	</div>
+	<div class="col-md-5 order-md-1">
+		<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="">
+	</div>
+</div>
+<hr class="featurette-divider">
+<div class="row featurette">
+	<div class="col-md-7">
+		<h2 class="featurette-heading">Why We Do It</h2>
+		<p class="lead">Women's education has been shown to have many positive effects on the community. Women with secondary education can go on to become schoolteachers, clinic workers, community health workers, and fill numerous other beneficial roles within their communities.</p>
+	</div>
+	<div class="col-md-5">
+		<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="">
+	</div>
+</div>
+<hr class="featurette-divider">
+<div class="row featurette">
+		<div class="col-md-7">
+		<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="">
+	</div>
+	<div class="col-md-5">
+		<h2 class="featurette-heading">How You Can Help</h2>
+		<p class="lead">We need your help. What may seem like pocket change to you may mean the difference between a drop-out and a graduate.
+			</br>
+			</br>
+			Help us spread the word. The more donors we have the bigger a difference we can make.
+			<h4>Nominate a girl</h4>
+		<%= link_to "Insaka Application", asset_path("insaka_application.pdf"), :class => "btn btn-large btn-danger" %></p>
+	</div>
+</div>
+<hr class="featurette-divider">
+<!-- /END THE FEATURETTES -->
+<footer>
+	<div class="text-center col-12 blue container-fluid">
+		<h2> <%= button_to "Send Us a Bushnote", page_path('contact'), {class: 'button'} %> </h2>
+		<div class="row">
+		</div>
+		<hr>
+		<div>
+			<p>Copyright &copy; Insaka 2017 -- All Rights Reserved. </p>
+		</div>
+	</div>
+	<!-- /.row -->
+</footer>

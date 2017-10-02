@@ -56,7 +56,7 @@ section {
   @extend .card;
   @extend .col-md-9;
   padding-bottom: 40px;
-  @extend .bg-faded;
+  @extend .bg-light;
   @extend .small;
 }
 .authform .right {
@@ -80,4 +80,48 @@ section {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-sm;
+}
+.navbar {
+  background-color: #1e619b;
+}
+.button {
+  background-color: #1e619b;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  color: #eeeeee;
+}
+.button:hover {
+    background-color: #eeeeee;
+    color: #1e619b;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.business-header {
+    height: 400px;
+    background: url('../images/IMG_9691.JPG') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.tagline {
+    text-shadow: 15px 15px 15px #000;
+    color: #fff;
+}
+.img-center {
+    margin: 0 auto;
+}
+footer {
+    margin: 50px 0;
+}
+.top-buffer { 
+    margin-top: 275px;
+}
+.text-center {
+  text-align: center;
+}
+.blue {
+  color: #1e619b;
+}
+.off-white {
+  color: #eeeeee;
 }
