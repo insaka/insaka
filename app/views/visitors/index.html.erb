@@ -1,5 +1,12 @@
 <p><% link_to 'Admin', users_path %> </p>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+</head>
 <header class="business-header">
+    
     <div class="container container-fluid">
         <div class="row">
             <div class="col-6">
@@ -11,42 +18,42 @@
         </div>
     </div>
 </header>
-<div class="container container-fluid">
-    <hr>
-    <div class="row text-blue container-fluid">
-        <div class="col-4 text-center">
-            <img class="img-circle img-responsive img-center" src="../images/IMG_9653_2.JPG" alt="Who We Are">
-            <h2> <%= link_to 'Who We Are', page_path('about') %> </h2>
+<body>
+    <div class="container">
+        <div class="row form-centered">
+            <div class="col-md-4">
+                <img class="rounded-circle" src="../images/IMG_9653_2.JPG" alt="Generic placeholder image" width="240" height="240">
+                <h2> <%= link_to 'Who We Are', page_path('about') %> </h2>
+            </div>
+            <div class="col-md-4">
+                <img class="rounded-circle" src="../images/IMG_9542_2.JPG" alt="Generic placeholder image" width="240" height="240">
+                <h2> <%= link_to 'Why We Do It', page_path('transparency') %> </h2>
+            </div>
+            <div class="col-md-4">
+                <img class="rounded-circle" src="../images/IMG_9713_2.JPG" alt="Generic placeholder image" width="240" height="240">
+                <h2> <%= link_to 'How You Can Help', page_path('donate') %> </h2>
+            </div>
         </div>
-        <div class="col-4 text-center">
-            <img class="img-circle img-responsive img-center" src="../images/IMG_9542_2.JPG" alt="Why We Do It">
-            <h2> <%= link_to 'Why We Do It', page_path('transparency') %> </h2>
+    </div>
+</body>
+<hr>
+<footer>
+    <div class="text-center col-12 blue container-fluid">
+        <h2> <%= button_to "Send Us a Bushnote", page_path('contact'), {class: 'button'} %> </h2>
+        <div>
+            <a href="https://twitter.com/Insakagirl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Insakagirl</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        <div class="col-4 text-center">
-            <img class="img-circle img-responsive img-center" src="../images/IMG_9713_2.JPG" alt="How You Can Help">
-            <h2> <%= link_to 'How You Can Help', page_path('donate') %> </h2>
+        <div>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Finsakagirlseducation%2F&width=100&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId" width="135" height="66" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        </br>
+        <div>
+            
+        </div>
+        <hr>
+        <div>
+            <p>Copyright &copy; Insaka 2017 -- All Rights Reserved. </p>
         </div>
     </div>
     <!-- /.row -->
-    <hr>
-    <!-- Footer -->
-    <footer>
-        <div class="text-center col-12 blue container-fluid">
-            <h2> <%= button_to "Send Us a Bushnote", page_path('contact'), {class: 'button'} %> </h2>
-            <div>
-                <a href="https://twitter.com/Insakagirl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Insakagirl</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div>
-                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Finsakagirlseducation%2F&width=100&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId" width="135" height="66" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-            </div>
-            </br>
-            <div>
-                
-            </div>
-            <hr>
-            <div>
-                <p>Copyright &copy; Insaka 2017 -- All Rights Reserved. </p>
-            </div>
-        </div>
-        <!-- /.row -->
-    </footer>
+</footer>

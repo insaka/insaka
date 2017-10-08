@@ -1,20 +1,13 @@
 <% content_for :title do %>Transparency<% end %>
 <hr class="featurette-divider">
 <div class="row featurette">
-    <div class="col-md-7">
-        <h2 class="featurette-heading">Business Model</h2>
-        <p class="lead">Our goal is to provide a friendly, efficient process that connects donors and rural African girls with the aim of paying their school fees. </p>
-    </div>
-    <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src="" alt="">
-    </div>
-</div>
-<hr class="featurette-divider">
-<div class="row featurette">
     <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">The Girls</h2>
-        <p class="lead">In order to receive help from Insaka, girls must go through an application process. The process starts with the identification of promising girls. For this, we will rely on development workers who are very familiar with their communities and the girls who might potentially benefit. We feel this is the best approach because development workers are often not bound by the familial, tribal, or cultural ties of their area, and thus can be objective in selecting girls.</p>
-        <p>The girls, with the development worker, will have to complete an application which will then be sent to Insaka for evaluation. If the application is accepted, the girl will be promoted on our website and donations can begin. We hope to provide updates about the girls' progress once they have begun secondary school. </p>
+        <p class="lead">We try to pick girls that have demonstrated need, motivation and potential for success.</p>
+        <p>The sad fact is that we can’t help ever rural girl in Zambia; we don’t have the resources. This makes it especially important to maximize the effect we can have. We do this through selecting the most promising girls.</p>
+        <p>The process starts with a foreign development worker on the ground in Zambia identifying a girl. We use currently serving development workers for two reasons; they have experienced the girl’s situation first hand and are the most qualified to make a decisions in the proper context. We use foreign workers because they are not bound by the clan, familial or tribal ties of the area. We want girls who deserve our help based on their merit, not their connections.</p>
+        <p>If the girl is interested in applying, then she and the development worker will complete the application together and send it to Insaka. We will collect the applications, chose the best ones, and put their profiles up on our website.</p>
+        <p>We will provide updates on the girl’s progress as possible. </p>
     </div>
     <div class="col-md-5 order-md-1">
         <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="">
@@ -24,10 +17,12 @@
 <div class="row featurette">
     <div class="col-md-7">
         <h2 class="featurette-heading">The Money </h2>
-        <p class="lead">We collect money via online donations through this site. This money will be disbursed at the beginning of the school year (usually January 1st). We pay for one school year at a time in case the girl is unable to finish school for any reason. We send the money directly to the school's bank account to minimize fraud. As school fees vary by school, we have set $650 as the standard yearly amount we aim to be collect for each girl. Any excess will go to help another girl.</p>
+        <p class="lead">We rely completely on donation made on this site.</p>
+        <p>Once we have collected enough money to sponsor a girl, we keep it until the beginning of the Zambian school year(January). We will pay for one school year at a time in case the girl is unable to finish school. We send the money directly to the school's bank account to minimize fraud. As school fees vary by secondary school, we have set $600 as the amount we want to raise for each girl. This amount also includes the fees for international wire transfers. </p>
+        <p>Any excess money from over donation or girls who don’t finish school will rolled over to help a different girl. </p>
     </div>
     <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="">
+        <img class="featurette-image img-fluid mx-auto" src="../images/kwatcha.jpg" alt="">
     </div>
 </div>
 <hr class="featurette-divider">
@@ -36,29 +31,30 @@
         <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="">
     </div>
     <div class="col-md-5">
-        <h2 class="featurette-heading">Insaka Expenses </h2>
-        <p class="lead">Approximately five percent of each donation will be collected to help us cover business expenses. Insaka is a volunteer organization. The business expenses include things such as bank transfer fees, website hosting charges, marketing drives, etc. Everything we can, we will send to the girls.</p>
+        <h2 class="featurette-heading">Insaka Expenses </h2> 
+        <p class="lead">We are a non-profit, but we still have expenses.</p>
+        <p>We must pay for things like website hosting, marketing drives, bank fees and office supplies. To do that, we take a small amount of the donation money. We can’t survive without it. We take only what we need, everything else we send to the girls. </p>
     </div>
 </div>
 <hr class="featurette-divider">
 <!-- /END THE FEATURETTES -->
-    <footer>
-        <div class="text-center col-12 blue container-fluid">
-            <h2> <%= button_to "Send Us a Bushnote", page_path('contact'), {class: 'button'} %> </h2>
-            <div>
-                <a href="https://twitter.com/Insakagirl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Insakagirl</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div>
-                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Finsakagirlseducation%2F&width=100&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId" width="135" height="66" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-            </div>
-            </br>
-            <div>
-                
-            </div>
-            <hr>
-            <div>
-                <p>Copyright &copy; Insaka 2017 -- All Rights Reserved. </p>
-            </div>
+<footer>
+    <div class="text-center col-12 blue container-fluid">
+        <h2> <%= button_to "Send Us a Bushnote", page_path('contact'), {class: 'button'} %> </h2>
+        <div>
+            <a href="https://twitter.com/Insakagirl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Insakagirl</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        <!-- /.row -->
-    </footer>
+        <div>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Finsakagirlseducation%2F&width=100&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId" width="135" height="66" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        </br>
+        <div>
+            
+        </div>
+        <hr>
+        <div>
+            <p>Copyright &copy; Insaka 2017 -- All Rights Reserved. </p>
+        </div>
+    </div>
+    <!-- /.row -->
+</footer>
