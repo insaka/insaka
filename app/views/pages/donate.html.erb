@@ -58,7 +58,9 @@
 </div>
 <footer>
     <div class="text-center col-12 blue container-fluid">
-        <h2> <%= button_to "Send Us a Bushnote", page_path('contact'), {class: 'button'} %> </h2>
+        <form action="http://www.insaka.org/pages/contact" method="get">
+          <button>Send Us a Bushnote</button>
+</form>
         <div>
             <a href="https://twitter.com/Insakagirl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Insakagirl</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
