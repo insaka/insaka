@@ -46,33 +46,32 @@
         
         <form action="http://www.insaka.org/pages/contact" method="get">
           <button>Send Us a Bushnote 1</button>
+          
         </form>
-            
-            <style>
-            .button {
-              background-color: #1e619b;
-             border: none;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-             font-size: 16px;
-            margin: 4px;
-            cursor: pointer;}
-        </style>
-            <input type="button" class="button" value="Send Us a Bushnote 2">
-            <form action="http://www.insaka.org/pages/contact" method="get">
-            
-            
-            
-            
-            
-            
-            
-            
-        </form>
+        <%= link_to "Insaka Application", asset_path("insaka_application.pdf"), :class => ".btn btn-large btn-danger" %>
         
+        
+        <style>
+.button {
+    background-color: #1e619b;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin:2px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<a href="#" class="button">Send Us a Bushnote</a>
+
+
+</body>
         
 
         <div>
