@@ -9,7 +9,8 @@ Bundler.require(*Rails.groups)
 module Insaka
   class Application < Rails::Application
 
-    config.middleware.use Rack::Deflator
+    config.middleware.use Rack::Deflator do
+    end
     
     
     config.generators do |g|
