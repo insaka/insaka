@@ -9,6 +9,9 @@ Bundler.require(*Rails.groups)
 module Insaka
   class Application < Rails::Application
 
+    config.middleware.use Rack::Deflator
+    
+    
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
