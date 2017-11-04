@@ -41,7 +41,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
-  gem 'heroku_rails_deflate'
+  gem 'heroku-deflater'
 end
 group :test do
   gem 'database_cleaner'
