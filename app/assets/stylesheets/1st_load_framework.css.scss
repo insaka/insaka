@@ -19,6 +19,17 @@ img {
   @extend .col-md-6;
   text-align: center;
 }
+
+.col-not-stack .x-column.x-1-3 {
+  width: 30.66666%;
+  float: left;
+  margin-right: 4%;
+}
+
+.col-not-stack .x-column.x-1-3:last-of-type {
+  margin-right: 0;
+}
+
 .form {
   @extend .col-md-6;
 }
