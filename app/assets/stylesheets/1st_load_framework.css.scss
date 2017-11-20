@@ -98,9 +98,14 @@ section {
 .button {
   background-color: #1e619b;
   -webkit-transition-duration: 0.4s; /* Safari */
+  padding: 15px 32px;
   transition-duration: 0.4s;
   color: #ffffff;
 }
+
+
+
+
 .button:hover {
     background-color: #ffffff;
     color: #1e619b;
