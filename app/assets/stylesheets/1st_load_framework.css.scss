@@ -97,11 +97,14 @@ section {
 }
 .button {
   background-color: #1e619b;
+  border: none;
   -webkit-transition-duration: 0.4s; /* Safari */
   padding: 15px 32px;
+  text-align: center;
   transition-duration: 0.4s;
-  color: #1e619b;
   font-color: #ffffff;
+  font-size: 16px;
+  border-radius: 8px;
 }
 
 
