@@ -121,11 +121,23 @@ section {
 .button2 {
     background-color: #1e619b;
     color: #ffffff;
+    padding: 6px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius:4px;
+    float: left
 }
 
 .button2:hover {
     background-color: #fffff;
     color: #1e619b;
+    padding: 6px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius:4px;
+    float: left
 }
 
 .button:hover {
