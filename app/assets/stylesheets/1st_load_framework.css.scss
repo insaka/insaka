@@ -97,15 +97,16 @@ section {
 }
 .button {
   background-color: #1e619b;
-  border: none;
   padding: 2px 2px;
   text-align: center;
   color: white;
   font-size: 16px;
   border-radius: 4px;
   margin: 100px 60px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
-.button2 {
+.button1 {
   background-color: #1e619b;
   padding: 6px;
   text-align: center;
@@ -114,8 +115,17 @@ section {
   font-weight: 900;
   border-radius:4px;
   float: left
+}
 
-  
+
+.button2 {
+    background-color: #1e619b;
+    color: #ffffff;
+}
+
+.button2:hover {
+    background-color: #fffff;
+    color: #1e619b;
 }
 
 .button:hover {
