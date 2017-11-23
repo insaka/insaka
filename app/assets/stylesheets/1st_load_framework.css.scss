@@ -102,10 +102,19 @@ section {
   color: white;
   font-size: 16px;
   border-radius: 4px;
-  margin: 8px 4px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+  margin:10px 0; 
 }
+
+  .button:hover {
+    background-color: #ffffff;
+    padding: 2px 2px;
+    text-align: center;
+    color: #1e619b;
+    font-size: 16px;
+    border-radius: 4px;
+    margin:10px 0;
+}
+ 
 .button1 {
   background-color: #1e619b;
   padding: 6px;
@@ -140,11 +149,6 @@ section {
     float: left
 }
 
-.button:hover {
-    background-color: #ffffff;
-    color: #1e619b;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
 .share_button{
   font-color: #ffffff;
 }
