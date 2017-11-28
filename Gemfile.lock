@@ -198,7 +198,6 @@ GEM
     selenium-webdriver (3.6.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
-    sitemap_generator 
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
