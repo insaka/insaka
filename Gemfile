@@ -41,7 +41,6 @@ end
 group :production do
   gem 'pg'
   gem 'cloudflare-rails'
-  gem 'sitemap_generator'
 end
 group :test do
   gem 'database_cleaner'
