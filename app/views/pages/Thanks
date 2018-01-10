@@ -1,0 +1,27 @@
+<% content_for :title do %>Thanks<% end %>
+    <hr class="featurette-divider">
+<div class="container-fluid">
+        <div class="row featurette">
+            <div class="text-center col-12>
+                <h1 class="featurette-heading">Thank you</h1>
+                <p class="lead">You've helped change somebody's life.<br>
+                
+                For our records, how much did you donate?</p>
+                
+                <body>
+
+<form action="/action_page.php">
+  Amount: <br>
+  <input type="text" name="amount">
+  <br>
+  <p>Would you like your name added to the list of donors that appears on our website?</p>
+   <input type="radio" name="name acceptance" value="yes" checked>Yes<br>
+    <input type="radio" name="name acceptance" value="no" checked>No<br>
+  If yes, please enter your name as you would like it to appear<br>
+  <input type="text" name="name">
+  <br><br>
+  <input type="submit" value="Submit" <a href="www.insaka.org">>
+</form> 
+
+</body>
+        
