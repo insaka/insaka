@@ -68,7 +68,7 @@
   <div class="modal-content">
     <span class="close">&times;</span>
                        <div>
-                       <img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Rachel.jpg " alt="An African girl who wants to go to school">
+                       <img class="img-circle img-responsive img-fluid mx-auto img-center max-width:30% height:auto" src="../images/Rachel.jpg " alt="An African girl who wants to go to school">
                    </div>
     <p>Thank you for donating to Rachel.</p>
                        <form action="/action_page.php">
@@ -77,11 +77,17 @@
   <br>
   Would you like your name added to our list of donors? If so, please type it as you would like it to appear.<br>
   <input type="text" name="name" value="">
-  <br><br>
-  <a href="http://www.insaka.org/pages/contact" class="button">Donate</a>
+  <br><div>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                 <input type="hidden" name="cmd" value="_s-xclick">
+                                 <input type="hidden" name="hosted_button_id" value="LA3XCAXXDM6DU">
+                                 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                        </div>
 </form> 
 
-<p>Once click the "Donate" button, you will forwarded to Paypal.</p>
+<p>Once click the Donate button, you will forwarded to Paypal.</p>
                   
                                         
   </div>
