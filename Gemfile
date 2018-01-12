@@ -40,6 +40,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  gem 'cloudflare-rails'
 end
 group :test do
   gem 'database_cleaner'
