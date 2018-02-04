@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012034112) do
+ActiveRecord::Schema.define(version: 20180204161333) do
 
   create_table "girls", force: :cascade do |t|
     t.string "name"
     t.float "percent_funded"
     t.datetime "began_funding"
+    t.float "amount_funded"
   end
 
   create_table "users", force: :cascade do |t|
