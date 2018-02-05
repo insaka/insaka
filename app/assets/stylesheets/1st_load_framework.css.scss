@@ -157,7 +157,11 @@ section {
     border-radius:4px;
     float: left
 }
-
+.newspaper {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
 .share_button{
   font-color: #ffffff;
 }
