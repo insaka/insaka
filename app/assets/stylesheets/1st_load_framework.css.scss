@@ -8,10 +8,6 @@ img {
   margin: 0 auto;
 }
 
-img1 {
-  @extend .img-fluid;
-   margin-left: 80px;
-}
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
@@ -194,6 +190,10 @@ overflow:hidden;
 }
 .img-center {
     margin: 0 auto;
+}
+
+.img-logo-navbar {
+     margin-left: 80px;
 }
 footer {
     margin: 50px 0;
