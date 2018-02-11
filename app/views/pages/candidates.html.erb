@@ -12,6 +12,16 @@
         		<p class="lead">Rachel and Mercy have left for school, and we have not yet selected girls to sponsor for the 2019 school year.</p>
 		    <p> We will begin accepting applications shortly, and hope to have chosen several girls by July 1<sup>st</sup>. <br>
 			    In the meantime, you can donate to our general fund. </p>  
+
+          <div>
+          <%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
+            <%= text_field(:donation, :amount) %>
+            <%# this next line is a hacky hacky hack! apologies to future self and anyone reading this %>
+            <%#= f.hidden_field :girl_id, value: Girl.first.id %>
+             <%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(242, 118, 73);" %>
+             <% end %>
+           </div>
+
                    <div>
                                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                                  <input type="hidden" name="cmd" value="_s-xclick">
