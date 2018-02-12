@@ -187,8 +187,26 @@ overflow:hidden;
     background: url("/images/Insaka poster girls.JPG") center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
+    background-size: cover; 
+}
+
+.business-header1 {
+    height: 100%;
+    width: 100%;
+    background: url("/images/Insaka poster girls.JPG") no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
 }
 .tagline {
     text-shadow: 0px 0px 0px #000;
