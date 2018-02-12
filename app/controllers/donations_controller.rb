@@ -8,7 +8,15 @@ class DonationsController < ApplicationController
     @donation = Donation.new(:amount => params["donation"]["amount"])
     @donation.girl_id = params["donation"]["girl_id"].to_i
     if @donation.save
-      redirect_to @donation.paypal_url(donation_path(@donation))
+      girl = Girl.find @donation.girl_id
+      girl.amount_funded += params["donation"]["amount"].to_i
+      girl.percent_funded = (girl.amount_funded/1200).to_f
+      girl.save!
+      if girl.save!
+        redirect_to @donation.paypal_url(donation_path(@donation))
+      else
+        render :new
+      end
     else
       render :new
     end
