@@ -60,10 +60,6 @@ section {
   margin-top: 20px;
 }
 
-.row1{
-top: 0;
-  left: 0;
-}
 
 // Styles for form views
 // using Bootstrap 4
@@ -191,9 +187,12 @@ top: 0;
 
 .business-header1 {
     background: url("/images/Insaka poster girls.JPG") center center no-repeat fixed;
-    height: 100%;
     width: 100%;
 
+}
+.headerContent{
+    margin: 0 auto; 
+  width: 960px;
 }
 
 
