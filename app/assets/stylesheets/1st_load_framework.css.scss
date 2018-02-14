@@ -55,13 +55,13 @@ main {
   margin-top: 30px; // accommodate the navbar
 }
 
-section {
-  @extend .row;
-  margin-top: 20px;
+main {
+  @extend .container1;
 }
 
 section {
-  @extend .row1;
+  @extend .row;
+  margin-top: 20px;
 }
 
 // Styles for form views
