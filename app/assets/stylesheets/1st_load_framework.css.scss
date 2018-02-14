@@ -55,10 +55,6 @@ main {
   margin-top: 30px; // accommodate the navbar
 }
 
-main {
-  @extend .container1;
-}
-
 section {
   @extend .row;
   margin-top: 20px;
@@ -176,14 +172,6 @@ section {
 .share_button{
   font-color: #ffffff;
 }
-
-
-
-.destiny{
-overflow:hidden;
-  height: 100%;
-}
-
 
 .business-header {
     height: 100%;
