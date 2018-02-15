@@ -54,8 +54,6 @@ main {
   @extend .container;
   margin-top: 30px; // accommodate the navbar
 }
-.container1{
-  margin: 0 auto;
 
 section {
   @extend .row;
@@ -189,6 +187,7 @@ section {
 
 .business-header1 {
   background-color:blue;
+   margin: 0 auto;
 }
 .header {
    width:100%;
