@@ -20,6 +20,12 @@ img {
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
+.container1 {
+  margin-top: 30px; // accommodate the navbar
+  width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
 .column {
   @extend .col-md-6;
   text-align: center;
@@ -188,13 +194,6 @@ section {
     -o-background-size: cover;
     background-size: cover;
    width: 100%;
-    max-width: 100%;
-    padding: 0;
-}
-
-.container1 {
-  margin-top: 30px; // accommodate the navbar
-  width: 100%;
     max-width: 100%;
     padding: 0;
 }
