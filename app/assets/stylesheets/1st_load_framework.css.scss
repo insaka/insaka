@@ -53,6 +53,9 @@ img {
 main {
   @extend .container;
   margin-top: 30px; // accommodate the navbar
+  width: 100%;
+    max-width: 100%;
+    padding: 0;
 }
 
 section {
