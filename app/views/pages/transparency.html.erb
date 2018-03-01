@@ -1,4 +1,13 @@
 <% content_for :title do %>Transparency<% end %>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <hr class="featurette-divider">
 <div class="container-fluid">
 <div class="row featurette">
@@ -48,8 +57,7 @@
           			  <a href="https://twitter.com/Insakagirl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Insakagirl</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br>
            			 <a href="https://www.pinterest.com/insakagirl/pins/"><img border="0" src="../images/pinterestlogo.png" width="30" height="30"><br> 
 			<a href="http://www.insaka.org/pages/contact" class="button">Send Us a Bushnote</a><br>
-					 <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Finsakagirlseducation%2F&width=100&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId" width="150" height="66" style="border:none;overflow:visible" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-					 </div>
+					<div class="fb-like" data-href="https://www.facebook.com/insakagirlseducation/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> </div>
 			
 		</div>
 	</div>
