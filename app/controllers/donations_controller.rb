@@ -9,6 +9,7 @@ class DonationsController < ApplicationController
     @donation.girl_id = params["donation"]["girl_id"].to_i
     if @donation.save
       girl = Girl.find @donation.girl_id
+      girl.amount_funded = girl.amount_funded == nil ? 0 : girl.amount_funded
       girl.amount_funded += params["donation"]["amount"].to_i
       girl.percent_funded = (girl.amount_funded/1200).to_f
       girl.save!
