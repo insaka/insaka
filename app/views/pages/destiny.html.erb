@@ -5,34 +5,27 @@
     <div class="col-sm-4 text-center mx-auto">
       <img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Mercy.jpg" alt="A Zambian girl preparing to go to high school">
     </div>
-    
-    
     <div class="col-sm-4 text-center mx-auto">
       <h2 class="featurette-heading">Candidates</h2>
       <p class="lead">Rachel and Mercy have left for school, and we have not yet selected girls to sponsor for the 2019 school year.</p>
       <p> We will begin accepting applications shortly, and hope to have chosen several girls by July 1<sup>st</sup>. <br>
       In the meantime, you can donate to our general fund. </p>
-        <div>
-          <%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
-            <%= text_field(:donation, :amount) %>
-            <%# this next line is a hacky hacky hack! apologies to future self and anyone reading this %>
-            <%#= f.hidden_field :girl_id, value: Girl.first.id %>
-             <%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(242, 118, 73);" %>
-             <% end %>
-           </div>
+      <div>
+        <%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
+        <%= text_field(:donation, :amount) %>
+        <%# this next line is a hacky hacky hack! apologies to future self and anyone reading this %>
+        <%#= f.hidden_field :girl_id, value: Girl.first.id %>
+        <%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(242, 118, 73);" %>
+        <% end %>
+      </div>
       <br>
       <div>
         <p>You can also donate through a workplace giving program, if your company uses <a href="https://causes.benevity.org/causes/840-822619657">Benevity</a>. Some companies will match your donation.</p>
       </div>
     </div>
-    
-    
     <div class="col-sm-4 text-center mx-auto">
       <img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Rachel.jpg" alt="African school girl with acceptance letter">
     </div>
-    
-    
-    
     <hr class="featurette-divider">
     <div class="text-center mx-auto col-12 container-fluid">
       <div class="row justify-content-sm-center">
@@ -43,7 +36,6 @@
           <div>
             <a href="https://twitter.com/Insakagirl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Insakagirl</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
-          
           <div>
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Finsakagirlseducation%2F&width=100&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId" width="150" height="66" style="border:none;overflow:visible" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </div>
@@ -56,12 +48,9 @@
           <a href="https://www.guidestar.org/profile/82-2619657" target="_blank"><img src="https://widgets.guidestar.org/gximage2?o=9651803&l=v4" /></a>
         </div>
       </div>
-      
     </div>
   </div>
   <hr class="featurette-divider">
-  
-  
   <footer>
     <div>
       <p style="color:#1e619b;">Copyright &copy; Insaka <%= Time.now.year %> -- All Rights Reserved. </p>
@@ -84,7 +73,6 @@
       </div>
       </br>
       </br>
-  
       <!--
       <div>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -93,7 +81,7 @@
           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </form>
-      </div> 
+      </div>
       -->
     </div>
     <div class="column col-sm-3 text-center mx-auto">
@@ -109,7 +97,6 @@
       </div>
       </br>
       </br>
-
       <div>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick">
@@ -132,17 +119,24 @@
   <hr class="featurette-divider">
   <div class="row featurette">
     <div class="col-12 container-fluid text-center mx-auto">
-     <br>
+      <br>
       <h1>Mercy and Rachel</h1>
       <p>We are trying to raise $2,400, that's for both girls, for all three years.</p>
       <br>
     </div>
   </div>
   <div class="progress">
+    <%if Girl.first.percent_funded.present?%>
     <div class="progress-bar progress-bar-striped active" role="progressbar"
       aria-valuenow="<%= Girl.first.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.first.percent_funded %>%">
       <%=Girl.first.percent_funded %>% Funded
     </div>
+    <%else%>
+    <div class="progress-bar progress-bar-striped active" role="progressbar"
+      aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+      0% Funded
+    </div>
+    <%end%>
   </div>
   <br>
   <br>
