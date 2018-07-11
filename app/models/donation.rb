@@ -10,8 +10,8 @@ class Donation < ApplicationRecord
       return: "#{Rails.application.secrets.app_host}#{return_path}",
       invoice: id,
       amount: amount,
-      description: "test foo thingggy",
-      # item_name: course.name, girl id? 
+      description: self.girl.name,
+      item_name: self.girl.name,
       notify_url: "#{Rails.application.secrets.app_host}/hook"
     }
     "#{Rails.application.secrets.paypal_host}/cgi-bin/webscr?" + values.to_query
