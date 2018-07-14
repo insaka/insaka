@@ -54,7 +54,7 @@
         <%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
         <%= text_field(:donation, :amount, placeholder: "enter amount here")%>
         <%# this next line is a hacky hacky hack! apologies to future self and anyone reading this %>
-        <%= f.hidden_field :girl_id_1, value: Girl.first.id %>
+        <%= f.hidden_field :girl_id, value: Girl.first.id %>
         <br>
         <%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
         <% end %>
