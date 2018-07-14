@@ -11,7 +11,7 @@ class DonationsController < ApplicationController
       girl = Girl.find @donation.girl_id
       girl.amount_funded = girl.amount_funded == nil ? 0 : girl.amount_funded
       girl.amount_funded += params["donation"]["amount"].to_i
-      girl.percent_funded = (girl.amount_funded/1200).to_f
+      girl.percent_funded = (girl.amount_funded/1250).to_f
       girl.save!
       if girl.save!
         redirect_to @donation.paypal_url(donation_path(@donation))
