@@ -37,7 +37,11 @@
 					<% end %>
 					</br>
 				</div>
+				<% if (Girl.first.percent_funded * 100).ceil/1 <= 100 %>
 				Rabbeca's secondary education is currently <%=(Girl.first.percent_funded * 100).ceil/1 %>% funded
+				<%else%>
+			         Rabbeca's secondary education is completely funded!
+				<%end%>
 			</div>
 		</div>
 		<hr>
@@ -73,7 +77,11 @@
 					<% end %>
 					</br>
 				</div>
+			      <% if (Girl.second.percent_funded * 100).ceil/1 <= 100 %>
 				Susan's secondary education is currently <%=(Girl.second.percent_funded * 100).ceil/1 %>% funded
+				<%else%>
+			         Susan's secondary education is completely funded!
+				<%end%>
 			</div>
 		</div>
 		<hr>
@@ -110,7 +118,11 @@
 					<% end %>
 					</br>
 				</div>
+				 <% if (Girl.third.percent_funded * 100).ceil/1 <= 100 %>
 				Caesinah's secondary education is currently <%=(Girl.third.percent_funded * 100).ceil/1 %>% funded
+				<%else%>
+			         Caesinah's secondary education is completely funded!
+				<%end%>											 
 			</div>
 		</div>
 		<hr>
