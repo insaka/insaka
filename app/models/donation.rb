@@ -1,6 +1,7 @@
 class Donation < ApplicationRecord
   belongs_to :girl
   serialize :notification_params, Hash
+  validates :amount, presence: true, numericality: { greater_than: 0 }
 
   def paypal_url(return_path)
     values = {

@@ -16,10 +16,10 @@ class DonationsController < ApplicationController
       if girl.save!
         redirect_to @donation.paypal_url(donation_path(@donation))
       else
-        render :new
+        redirect_to '/pages/candidates', alert: "Error: #{@donation.errors.messages}"
       end
     else
-      render :new
+      redirect_to '/pages/candidates', alert: "Donation error: #{@donation.errors.messages}"
     end
   end
 
