@@ -55,6 +55,7 @@
 			</div>
 			<br>
 			<br>
+			<br>
 			<% if Girl.find(10).percent_funded.present? %>
 			<% if (Girl.find(10).percent_funded * 100).ceil/1 < 100 %>
 			<div>
@@ -92,12 +93,22 @@
 		<br>
 		<br>
 	</div>
+
+<div class="col-sm-12 text-center mx-auto">
+		<h2 class="featurette-heading">Already Funded for 2019</h2>
+	<br>
+	<p>We have already raised enough money for these girls' secondary school educations</p>
+	</div>
+		
+
+
+
 	<div class="row featurette">
 		<div class="col-sm-4 text-center mx-auto">
 			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Rabecca3-min.jpg" alt="A Zambian girl preparing to go to high school">
 			<br>
 			<div>
-				Rabbeca Chisha is from Mutiti village in Mansa district. Rabbeca’s mother died when she was young and since then she has lived with caretakers in her village who have children of their own and are unable to fund any further education. When asked about favorite subjects, Rebecca said she likes both math and English and might like to be a journalist.<a href = "http://www.insaka.org/pages/more"><span style="color:blue"> More...</span></a>
+				Rabbeca Chisha is from Mutiti village in Mansa district. Rabbeca’s mother died when she was young and since then she has lived with caretakers in her village who have children of their own and are unable to fund any further education. When asked about favorite subjects, Rebecca said she likes both math and English and might like to be a journalist.
 			</div>
 			<br>
 			<br>
@@ -137,7 +148,7 @@
 			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Susan5.jpg" alt="A Zambian girl preparing to go to high school">
 			<br>
 			<div>
-				Susan Moyo is 14 and goes to school in Mkushi district at Milombwe. She is the oldest girl in a family with 7 children. Susan would like to eventually become a teacher and mentioned several times how important it is to her to set an example for her younger siblings.<a href = "http://www.insaka.org/pages/more"><span style="color:blue"> More...</span></a>
+				Susan Moyo is 14 and goes to school in Mkushi district at Milombwe. She is the oldest girl in a family with 7 children. Susan would like to eventually become a teacher and mentioned several times how important it is to her to set an example for her younger siblings.
 			</div>
 			<br>
 			<br>
@@ -158,6 +169,8 @@
 						aria-valuenow="<%= Girl.second.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.second.percent_funded * 100%>%">
 					</div>
 					</br>
+				<br>
+				<br>
 				</div>
 				Susan's secondary education is currently <%=(Girl.second.percent_funded * 100).ceil/1 %>% funded
 			</div>
@@ -177,9 +190,9 @@
 			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Caesinah(4).jpg" alt="A Zambian girl preparing to go to high school">
 			<br>
 			<div>
-				This is Caesinah Chalwe. Caesinah and her younger sister live with their grandmother who is a farmer in Kabamba, in Serenje district. Caesinah is 15 and says "Science is my favorite subject. I want to become a nurse so I like learning about the human body. I want to complete senior secondary because I know education is important. I want to work in full employment and even go to college."<a href = "http://www.insaka.org/pages/more"><span style="color:blue"> More...</span></a>
+				This is Caesinah Chalwe. Caesinah and her younger sister live with their grandmother who is a farmer in Kabamba, in Serenje district. Caesinah is 15 and says "Science is my favorite subject. I want to become a nurse so I like learning about the human body. I want to complete senior secondary because I know education is important. I want to work in full employment and even go to college.
 			</div>
-			<br>
+	
 			<br>
 			<% if Girl.third.percent_funded.present? %>
 			<% if (Girl.third.percent_funded * 100).ceil/1 < 100 %>
