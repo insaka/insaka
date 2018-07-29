@@ -5,7 +5,7 @@ class DonationsController < ApplicationController
   end
 
   def create
-    @donation = Donation.new(:amount => params["donation"]["amount"])
+    @donation = Donation.new(:amount => params["donation"]["amount"], :purchased_at => Time.now)
     @donation.girl_id = params["donation"]["girl_id"].to_i
     if @donation.save
       girl = Girl.find @donation.girl_id
