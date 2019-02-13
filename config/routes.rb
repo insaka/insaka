@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post "/hook" => "donations#hook"
   post "/donations/:id" => "donations#show"
 
+  get :start_game, to: "visitors#start_game"
+
 end

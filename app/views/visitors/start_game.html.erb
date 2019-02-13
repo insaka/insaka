@@ -1,0 +1,538 @@
+<br>
+<div class="container-fluid game-container mb-45">
+  <div class="page active first-page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white">
+          <div class="mt-20">It’s difficult for a rural Zambian girl to go to secondary school</div>
+          <div class="mt-45">How difficult? Try it for yourself</div>
+          <div class="mt-100">Click on the options to see where your future leads</div>
+          <div class="mt-100"><%= link_to "Click Here to Start", "javascript:void(0);", class: 'btn btn-primary', id: 'start', data: {templete_id: 1} %></div>
+          <div class="mt-45">Please use the links to navigate</div>
+          <div class="mt-45">This is a gross oversimplification for learning purposes</div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/IMG_9720.JPG" alt="Zambian girls playing at school">
+      </div>
+      <div class="col-sm-8 mt-20">
+        <h2 class="text-center white"><u>Background</u></h2>
+        <h4 class="white text-center">
+          <p class="mt-45">
+            You are a 16 year old girl in rural Zambia. You have a mother, father and two brothers. Your father spends his time fishing or farming. Your mother cooks, cleans and helps your father. Your two brothers go to school. 
+          </p>
+          <p class="mt-45">
+            Your family is very poor. You are often hungry. You wear your cousin’s old, tattered school uniform. You only have one pen and it doesn’t always work. You get malaria sometimes. Your are expected to help your parents with chores. 
+          </p>
+          <div class="mt-100"><%= link_to "Next", "javascript:void(0);", class: 'btn btn-primary', id: 'next', data: {templete_id: 2}%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            You wake up in the morning. It’s drizzling. School is a 10km walk away. You’re still hungry from last night.
+          </div>
+          <div class="mt-45">You can either</div>
+          <div class="mt-45"><%= link_to "Go to school, knowledge is worth starving and being soaked", "javascript:void(0);", class: 'btn btn-primary', id: 'yes', data: {template_name: '1-yes'}%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Stay home, you’ll be dry and maybe you can convince mom to boil a sweet potato", "javascript:void(0);", class: 'btn btn-primary', id: 'no', data: {template_name: '1-no'} %></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page 1-yes">
+    <div class="row featurette">
+      <div class="col-sm-12 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            You go to school, but the teachers, and society at large, think that boys are smarter than girls. You hear this constantly, over and over. Nobody expects you to do well in school. Instead, you are told to sweep the classroom, cook for visitors and wash things.
+          </p>
+        </h4>
+      </div>
+    </div>
+    <div class="row featurette">
+
+      <div class="col-sm-8 mt-20">
+        <h4 class="white text-center">
+          <div>
+            <%= link_to "Do you Start to agree, this must be a reason your community has no female leaders", "javascript:void(0);", class: 'btn btn-primary', id: 'yes', data: {template_name: '2-yes'}%>
+          </div>
+          <div class="mt-20">Or</div>
+          <div class="mt-20">
+            <%= link_to "Work hard to do the chores quickly and get back to class", "javascript:void(0);", class: 'btn btn-primary', id: 'no', data: {template_name: '2-no'}%>
+          </div>
+          <div class="mt-100">
+            <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+          </div>
+        </h4>
+      </div>
+
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/Zambian-girls-playing-games-at-school-compressor.jpg" alt="Girls sweeping in the school">
+      </div>
+    </div>
+  </div>
+
+  <div class="page 1-no">
+    <div class="row featurette">
+      <div class="col-sm-12 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            You stay home and your mother puts you to work. There is water to fetch, fish to gut, corn to plant, clothes to wash, firewood to gather, caterpillars to catch, a house to sweep and much more 
+          </p>
+        </h4>
+      </div>
+    </div>
+    <div class="row featurette">
+
+      <div class="col-sm-8 mt-20">
+        <h4 class="white text-center">
+          <div>
+            <%= link_to "You can Go back to school, it was more fun than working all day", "javascript:void(0);", class: 'btn btn-primary', id: 'yes', data: {template_name: '4-yes'} %>
+          </div>
+          <div class="mt-20">Or</div>
+          <div class="mt-20">
+            <%= link_to "Stay at home, you are proud to be helping so much", "javascript:void(0);", class: 'btn btn-primary', id: 'no', data: {template_name: '4-no'}%>
+          </div>
+          <div class="mt-100">
+            <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+          </div>
+        </h4>
+      </div>
+
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/IMG_9694.JPG" alt="Zambian girls playing at school">
+      </div>
+    </div>
+  </div>
+
+  <div class="page 2-yes">
+    <div class="row featurette">
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/IMG_9542.JPG" alt="Zambian girls playing at school">
+      </div>
+      <div class="col-sm-8 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            Of course boys are better than girls. Why are you even coming to school? All you are good for is producing children and working. You will never amount to anything. Ever. 
+          </p>
+          <div class="mt-45">You can either</div>
+          <div class="mt-45"><%= link_to "Stop school", "javascript:void(0);", class: 'btn btn-primary', id: 'yes', data: {template_name: '3-yes'} %></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Go to school to see your friends", "javascript:void(0);", class: 'btn btn-primary', id: 'no', data: {template_name: '3-no'} %></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page 2-no">
+    <div class="row featurette">
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/IMG_9699.JPG" alt="Zambian girls playing at school">
+      </div>
+      <div class="col-sm-8 text-center mt-20">
+        <h4 class="white text-center">
+          <div>
+            You pass the exams! You are accepted at a boarding school 50km away. Your parents are skeptical about sending their only daughter away on her own. Who will take care of you? Who will help your mother? Should a girl even be in school?
+          </div>
+          <div class="mt-45">Do you</div>
+          <div class="mt-45"><%= link_to "Stay", "javascript:void(0);", class: 'btn btn-primary', id: 'yes', data: { template_name: '5-yes'} %></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Leave your home and family", "javascript:void(0);", class: 'btn btn-primary', id: 'no', data: { template_name: '5-no'} %></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page 3-yes">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white">
+          <div class="mt-20">
+            You spend your time working now. You think about school sometimes, but you have a lot of work and are always tired. You do get to spend your days with your family though, and that’s nice. 
+          </div>
+          <div class="mt-45">
+            You’ll probably get married soon, move to your husband’s hut and start a new life. There will be babies, farming, cooking, cleaning, and work. Lot of work.
+          </div>
+          <div class="mt-100"><b>YOUR EDUCATION IS OVER</b></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page 3-no">
+    <div class="row featurette">
+      <div class="col-sm-12 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            You go to school, but only because your friends are there. They don’t like school either. One of your friends lives near school and keeps inviting your group over to her house during class time. Everybody else in your group goes.
+          </p>
+        </h4>
+      </div>
+    </div>
+    <div class="row featurette">
+      <div class="col-sm-8 mt-20">
+        <h4 class="white text-center">
+          <div>
+            <%= link_to "Do you Go to class and risk distancing yourself from your friends", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%>
+          </div>
+          <div class="mt-20">Or</div>
+          <div class="mt-20">
+            <%= link_to "Skip class with your friends", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%>
+          </div>
+          <div class="mt-100">
+            <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+          </div>
+        </h4>
+      </div>
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/Zambian-girls-playing-games-at-school-compressor.jpg" alt="Zambian girls playing at school">
+      </div>
+    </div>
+  </div>
+
+  <div class="page 4-yes">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            You go back to school. Your classmates have been learning while you were away and tease you for not understanding things. When the teacher asks you to read aloud, people in your class laugh at you because you read slowly and sometimes mispronounce words. 
+          </div>
+          <div class="mt-45">You can either</div>
+          <div class="mt-45"><%= link_to "Stay in school and do your best to avoid attention", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Stop going to school, you hate it", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page 4-no">
+    <div class="row">
+      <div class="col-sm-12 mt-20">
+        <h4 class="white text-center">
+          <p>You get married</p>
+          <p class="mt-45">
+            You’re a grown woman now. You have to care for your husband and your household. There is little time for school. 
+          </p>
+      </div>
+    </div>
+    <div class="row featurette">
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/IMG_5633.jpg" alt="Zambian girls playing at school">
+      </div>
+      <div class="col-sm-8 mt-20">
+        <h4 class="white text-center">
+          <b>YOUR EDUCATION IS OVER</b>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-6 mt-20">
+        <img class="img-fluid" src="../images/Zambian-girls-playing-games-at-school-compressor.jpg" alt="Girls sweeping in the school">
+      </div>
+      <div class="col-sm-6 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            You’re in school and learning steadily. You and a boy in your class have been flirting for a while now. His parents are visiting relatives in another village tonight and he has invited you to come visit his hut this evening
+          </p>
+          <div>
+            <%= link_to "Agree. You’re a teenager and curious about boys", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%>
+          </div>
+          <div class="mt-20">Or</div>
+          <div class="mt-20">
+            <%= link_to "Tell him you’re busy. Your parents will beat you if they find out", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%>
+          </div>
+          <div class="mt-100">
+            <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+          </div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            You’re at the boy’s hut and he tells you how much he loves you and wants to have sex with you.
+          </div>
+          <div class="mt-45"><%= link_to "Do you Agree. He’s really pushing you, and you’re excited", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Go home, your mother told you horror stories about sex", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            You ask if he has a condom and he just laughs. He says he wouldn’t eat a sweet with the wrapper on. He starts taking off your shirt.
+          </div>
+          <div class='mt-45'>You can either</div>
+          <div class="mt-45"><%= link_to "Let him continue, you don’t want to make a fuss", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Leave, knowing he’ll probably tell all of his friends about this", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            The Grade 9 exams are in two months. You must pass them to get into secondary school, Grades 10-12. One of the teachers is holding a review session after school. Your mother has also asked you to do the laundry today.
+          </div>
+          <div class="mt-45"><%= link_to "Do you want to Do the laundry, there will be time to study later", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Go to the review session. You’ll have to stay up late tonight washing clothes", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            You’re pregnant. And maybe HIV+. Your parents want you to marry the father, he will have to pay a bride price of about $10 for you, and that will be a windfall for your family. You don’t think you even like this guy.
+          </div>
+          <div class='mt-45'>Do you marry the father?</div>
+          <div class="mt-45"><%= link_to "Yes, at least you’ll have a normal life with a husband, a house and children", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Go to the review session. You’ll have to stay up late tonight washing clothes", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            You have your baby. You are still living with your parents and they help you care for the child. The Head Teacher visits your family to inform you that the government will permit you to re-enter school.
+          </div>
+          <div class='mt-45'>Do you want to go back to school?</div>
+          <div class="mt-45"><%= link_to "Yes, you liked school", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "No, everybody in the village would talk about you, the mother who went to school instead of caring for her baby", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            You start missing class regularly. One of the teachers runs into your father in the village and asks where you are. Your father is angry, he has to pay for you to go to school and you are wasting what little money your family has. He tells you to either go to school everyday or stay home and help your mother.
+          </div>
+          <div class='mt-45'>Do you</div>
+          <div class="mt-45"><%= link_to "Stay home and work", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Go back to school, even though you don’t like it", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 text-center">
+        <h4 class="white text-center">
+          <div class="mt-20">
+            Your family doesn’t have the money to pay for you to take them again.
+          </div>
+          <div class="mt-45">
+            You can’t go to secondary school. 
+          </div>
+          <div class="mt-100">
+            <b>YOUR EDUCATION IS OVER</b></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            After lots of talking, your parents finally agree that you can go. The school sends a letter informing you that tuition is $225 per year. 
+          </p>
+          <p class="mt-45">
+            Your parents are subsistence farmers; your family doesn’t make that much cash in a year
+          </p>
+        </h4>
+      </div>
+    </div>
+    <div class="row featurette">
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/IMG_9694.JPG" alt="Zambian girls playing at school">
+      </div>
+      <div class="col-sm-8 mt-20">
+        <h4 class="white text-center">
+          <div>
+            <%= link_to "You can Ask your teacher about government scholarships", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%>
+          </div>
+          <div class="mt-20">Or</div>
+          <div class="mt-20">
+            <%= link_to "Ask your extended family for money", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%>
+          </div>
+          <div class="mt-100">
+            <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+          </div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            You’ve done everything you can, but it doesn’t matter. You can’t afford secondary school. 
+          </p>
+          <p class="mt-45">
+            <b>Your education is over.</b>
+          </p>
+          <p class="mt-45">How do you feel? How would you feel if this were your life, not a game?</p>
+          <p class="mt-45">Visit <a href="www.insaka.org">www.insaka.org</a> to learn how you can help</p>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            These girls don’t get a second chance, 
+          </p>
+          <p class="mt-100">
+            but we’ll give you one
+          </p>
+          <div class="mt-100"><%= link_to "Continue", "javascript:void(0);", id: 'continue'%></div>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row featurette">
+      <div class="col-sm-12 mt-20">
+        <h4 class="white text-center">
+          <p class="mt-45">
+            You finish doing all the laundry, then your mom asks you to help her prepare dinner. By the time you finish cooking, it’s time to eat, and by the time you finish eating, it’s nearly time for bed. 
+          </p>
+        </h4>
+      </div>
+    </div>
+    <div class="row featurette">
+      <div class="col-sm-8 mt-20">
+        <h4 class="white text-center">
+          <div class="mt-45">Do you</div>
+          <div class="mt-45"><%= link_to "Go to bed, you’re exhausted after a day of school and chores", "javascript:void(0);", class: 'btn btn-primary', id: 'yes'%></div>
+          <div class="mt-45">Or</div>
+          <div class="mt-45"><%= link_to "Stay up and study for your exams by the light of the fire", "javascript:void(0);", class: 'btn btn-primary', id: 'no'%></div>
+          <div class="mt-100"><%= link_to "Back to the beginning", "javascript:void(0);", class: 'back-start'%></div>
+        </h4>
+      </div>
+      <div class="col-sm-4 mt-20">
+        <img class="img-fluid" src="../images/IMG_9694.JPG" alt="Zambian girls playing at school">
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+
+<style type="text/css">
+  .game-container {
+    background-color: #1582c1d1;
+    border: 2px #1582c1d1;
+  }
+  .white {
+    color: #fff;
+  }
+  .mt-20 {
+    margin-top: 20px;
+  }
+  .mt-45 {
+    margin-top: 45px;
+  }
+  .mt-100 {
+    margin-top: 100px;
+  }
+  .mb-45 {
+    margin-bottom: 45px;
+  }
+  .page {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+</style>
+
+<script type="text/javascript">
+  $('#start, #next').on('click', function(){
+    $(this).closest('.page').next().addClass('active');
+    $(this).closest('.page').removeClass('active')
+  });
+
+  $('#yes, #no').on("click", function(){
+    let next_page = '.'+$(this).data('templateName');
+    $(next_page).addClass('active');
+    $(this).closest('.page').removeClass('active');
+  });
+
+  $(".back-start").on("click", function(){
+    $(".first-page").addClass('active');
+    $(this).closest('.page').removeClass('active')
+  })
+</script>
