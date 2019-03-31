@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Edit</h1>
+      <%= form_tag "/girls/#{@girl.id}/edit", method: :post do %>
+     
+        <div class="col-xs-12">
+          <%= text_field_tag :first_name, @girl.first_name, placeholder: "First Name" %>
+   
+        </div>
+        <div class="col-xs-12">
+          <%= text_field_tag :last_name, @girl.last_name, placeholder: "Last Name" %>
+          
+        </div>
+        <div class="col-xs-12">
+          <%= text_field_tag :quote, @girl.quote, placeholder: "Favorite Quote" %>
+
+        </div>
+        <div class="col-xs-12">
+          <%= label_tag :description %>
+        </div>
+        <div class="col-xs-12">
+          <%= text_area_tag :description, @girl.description, placeholder: "Description" %>
+        </div>
+        <div class="col-xs-12">
+          <%= select_tag :status, options_for_select([['Select Status', ''], ['Seeking Funding', 'seeking'], ['Funded', 'funded']], '') %>
+        </div>
+        <div class="col-xs-12">
+          <%= text_field_tag :image, @girl.image, placeholder: "Image URL" %>
+        </div>
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
