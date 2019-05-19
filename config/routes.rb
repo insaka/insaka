@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post "/hook" => "donations#hook"
   post "/donations/:id" => "donations#show"
   get "/scholars" => 'scholars#index'
+  
 end
