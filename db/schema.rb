@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180717040612) do
+ActiveRecord::Schema.define(version: 20190519161449) do
 
   create_table "donations", force: :cascade do |t|
     t.text "notification_params"
@@ -21,12 +21,18 @@ ActiveRecord::Schema.define(version: 20180717040612) do
     t.integer "girl_id"
   end
 
-  create_table "girls", force: :cascade do |t|
-    t.string "name"
+  create_table "scholars", force: :cascade do |t|
     t.float "percent_funded"
     t.datetime "began_funding"
     t.float "amount_funded"
     t.text "description"
+    t.string "status"
+    t.string "image"
+    t.string "quote"
+    t.string "first_name"
+    t.string "last_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
