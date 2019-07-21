@@ -1,0 +1,187 @@
+<% content_for :title do %>Destiny<% end %>
+<div class="container-fluid">
+	<br>
+	<div class="col-sm-12 text-center mx-auto">
+		<h2 class="featurette-heading">Candidates</h2>
+	</div>
+	<br>
+	<div class="row featurette">
+		<div class="col-sm-4 text-center mx-auto">
+			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Rabecca3-min.jpg" alt="A Zambian girl preparing to go to high school">
+			<br>
+			<div>
+				Rabbeca Chisha is from Mutiti village in Mansa district. Rabbeca’s mother died when she was young and since then she has lived with caretakers in her village who have children of their own and are unable to fund any further education. When asked about favorite subjects, Rebecca said she likes both math and English and might like to be a journalist.<a href = "http://www.insaka.org/pages/more"><span style="color:blue"> More...</span></a>
+			</div>
+			<br>
+			<br>
+			<% if Girl.first.percent_funded.present? %>
+			<% if (Girl.first.percent_funded * 100).ceil/1 < 100 %>
+			<div>
+				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
+				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
+				<%= f.hidden_field :girl_id, value: Girl.first.id %>
+				<br>
+				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
+				<% end %>
+			</div>
+			<br>
+			<div class="container-fluid">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped active" role="progressbar"
+						aria-valuenow="<%= Girl.first.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.first.percent_funded * 100%>%">
+					</div>
+					</br>
+				</div>
+				Rabbeca's secondary education is currently <%=(Girl.first.percent_funded * 100).ceil/1 %>% funded
+			</div>
+			<%else%>
+			<div class="container-fluid">
+				Rabbeca's secondary education is completely funded!
+			</div>
+			<%end%>
+			<%else%>
+			<div class="progress-bar progress-bar-striped active" role="progressbar"
+				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				0% Funded
+			</div>
+			<%end%>
+		</div>
+		<hr>
+		<div class="col-sm-4 text-center mx-auto">
+			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Susan5.jpg" alt="A Zambian girl preparing to go to high school">
+			<br>
+			<div>
+				Susan Moyo is 14 and goes to school in Mkushi district at Milombwe. She is the oldest girl in a family with 7 children. Susan would like to eventually become a teacher and mentioned several times how important it is to her to set an example for her younger siblings.<a href = "http://www.insaka.org/pages/more"><span style="color:blue"> More...</span></a>
+			</div>
+			<br>
+			<br>
+			<% if Girl.second.percent_funded.present? %>
+			<% if (Girl.second.percent_funded * 100).ceil/1 < 100 %>
+			<div>
+				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
+				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
+				<%= f.hidden_field :girl_id, value: Girl.second.id %>
+				<br>
+				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
+				<% end %>
+			</div>
+			<br>
+			<div class="container-fluid">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped active" role="progressbar"
+						aria-valuenow="<%= Girl.second.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.second.percent_funded * 100%>%">
+					</div>
+					</br>
+				</div>
+				Susan's secondary education is currently <%=(Girl.second.percent_funded * 100).ceil/1 %>% funded
+			</div>
+			<%else%>
+			<div class="container-fluid">
+				Susan's secondary education is completely funded!
+			</div>
+			<%end%>
+			<%else%>
+			<div class="progress-bar progress-bar-striped active" role="progressbar"
+				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				0% Funded
+			</div>
+			<%end%>
+		</div>
+		<hr>
+		<div class="col-sm-4 text-center mx-auto">
+			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Caesinah(4).jpg" alt="A Zambian girl preparing to go to high school">
+			<br>
+			<div>
+				This is Caesinah Chalwe. Caesinah and her younger sister live with their grandmother who is a farmer in Kabamba, in Serenje district. Caesinah is 15 and says "Science is my favorite subject. I want to become a nurse so I like learning about the human body. I want to complete senior secondary because I know education is important. I want to work in full employment and even go to college."<a href = "http://www.insaka.org/pages/more"><span style="color:blue"> More...</span></a>
+			</div>
+			<br>
+			<br>
+			<% if Girl.third.percent_funded.present? %>
+			<% if (Girl.third.percent_funded * 100).ceil/1 < 100 %>
+			<div>
+				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
+				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
+				<%= f.hidden_field :girl_id, value: Girl.third.id %>
+				<br>
+				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
+				<% end %>
+			</div>
+			<br>
+			<div class="container-fluid">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped active" role="progressbar"
+						aria-valuenow="<%= Girl.third.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.third.percent_funded * 100%>%">
+					</div>
+					</br>
+				</div>
+				Caesinah's secondary education is currently <%=(Girl.third.percent_funded * 100).ceil/1 %>% funded
+			</div>
+			<%else%>
+			<div class="container-fluid">
+				Caesinah's secondary education is completely funded!
+			</div>
+			<%end%>
+			<%else%>
+			<div class="progress-bar progress-bar-striped active" role="progressbar"
+				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				0% Funded
+			</div>
+			<%end%>
+		</div>
+		<hr>
+	</div>
+	<div>
+		<div class="row featurette">
+			<div class="col-sm-12 text-center mx-auto">
+				<br>
+				<p>We are trying to raise $1,250 for each girl which will cover all three years of secondary school.<p>
+					<br>
+					<br>
+					<p>While we are very happy to have the chance to help these girls, it is
+						unfortunate that we cannot do more. There were two more girls,
+						Chikontwe Rosemary and Bwalya Stephanie who we felt had especially
+						strong applications and have chosen as alternates. If we find that we have
+						raised as much as is needed for the initial three girls before October, we
+					will begin raising money to send these additional girls to school also.</p>
+					<img class="img-circle img-responsive img-fluid mx-auto img-center width="60" height:auto" src="../images/Rosemary(2)(1).jpg"
+					" alt="">
+					<img class="img-circle img-responsive img-fluid mx-auto img-center width="60" height:auto" src="../images/Stephania(2)(1).jpg"
+					" alt="">
+					
+				</div>
+			</div>
+			<br>
+			<br>
+			<hr class="featurette-divider">
+			<footer>
+				
+				<div class="text-center col-12 blue container-fluid">
+					<div class="row featurette">
+						<div class="col-sm-4">
+							<div>
+								<a href="https://www.guidestar.org/profile/82-2619657" target="_blank"><img src="https://widgets.guidestar.org/gximage2?o=9651803&l=v4" /></a>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<a href="http://www.insaka.org/pages/contact" class="button">Send Us a Bushnote</a>
+						</div>
+						<div class="col-sm-2">
+							<a href="https://www.pinterest.com/insakagirl/pins/"><img border="0" src="../images/pinterest1.png" width="30" height="30">
+							</div>
+							<div class="col-sm-2">
+								<a href="https://twitter.com/Insakagirl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Insakagirl</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+							</div>
+							<div class="col-sm-2">
+								<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Finsakagirlseducation%2F&width=100&layout=button_count&action=like&size=large&show_faces=false&share=true&height=46&appId" width="150" height="66" style="border:none;overflow:visible" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+							</div>
+						</div>
+						<div class="row featurette">
+							<div class="col-sm-12">
+								<div>
+									<p style="color:#1e619b;">Copyright &copy; Insaka <%= Time.now.year %> -- All Rights Reserved. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</footer
