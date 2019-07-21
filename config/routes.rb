@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/' => 'pages#home'
   get '/pages/about' => 'pages#about'
   get 'pages/application' => 'pages#application'
   get '/pages/candidates' => 'pages#candidates'
