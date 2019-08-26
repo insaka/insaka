@@ -108,63 +108,9 @@
 	</div>
 </div>
 <div>
-		<div class="row featurette">
-			<div class="col-sm-12 text-center mx-auto">
-				<br>
-				<br>
-				<p>We are trying to raise $1,250 for each girl which will cover all three years of secondary school.<p>
-					
-				</div>
-			</div>	
-	<hr class="featurette-divider">
-<div class="col-sm-12 text-center mx-auto">
-	<br>
-		<h2 class="featurette-heading">Already Funded for 2019</h2>
-	<br>
-	<p>We have already raised enough money for these girls' secondary school educations</p>
-	</div>
 	<div class="row featurette">
-		<div class="col-sm-4 text-center mx-auto">
-			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Rabecca3-min.jpg" alt="A Zambian girl preparing to go to high school">
-			<br>
-			<div>
-				Rabbeca Chisha is from Mutiti village in Mansa district. Rabbeca’s mother died when she was young and since then she has lived with caretakers in her village who have children of their own and are unable to fund any further education. When asked about favorite subjects, Rebecca said she likes both math and English and might like to be a journalist.
-			</div>
-			<br>
-			<br>
-			<% if Girl.first.percent_funded.present? %>
-			<% if (Girl.first.percent_funded * 100).ceil/1 < 100 %>
-			<div>
-				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
-				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.first.id %>
-				<br>
-				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
-				<% end %>
-			</div>
-			<br>
-			<div class="container-fluid">
-				<div class="progress">
-					<div class="progress-bar progress-bar-striped active" role="progressbar"
-						aria-valuenow="<%= Girl.first.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.first.percent_funded * 100%>%">
-					</div>
-					</br>
-				</div>
-				Rabbeca's secondary education is currently <%=(Girl.first.percent_funded * 100).ceil/1 %>% funded
-			</div>
-			<%else%>
-			<div class="container-fluid">
-				Rabbeca's secondary education is completely funded!
-			</div>
-			<%end%>
-			<%else%>
-			<div class="progress-bar progress-bar-striped active" role="progressbar"
-				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-				0% Funded
-			</div>
-			<%end%>
-		</div>
-		<div class="col-sm-4 text-center mx-auto">
+		
+		<div class="col-sm-6 text-center mx-auto">
 			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Susan5.jpg" alt="A Zambian girl preparing to go to high school">
 			<br>
 			<div>
@@ -208,7 +154,7 @@
 			</div>
 			<%end%>
 		</div>
-		<div class="col-sm-4 text-center mx-auto">
+		<div class="col-sm-6 text-center mx-auto">
 			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Caesinah(4).jpg" alt="A Zambian girl preparing to go to high school">
 			<br>
 			<div>
@@ -250,6 +196,16 @@
 		</div>
 		<hr>
 	</div>
+
+
+		<div class="row featurette">
+			<div class="col-sm-12 text-center mx-auto">
+				<br>
+				<br>
+				<p>We are trying to raise $1,250 for each girl which will cover all three years of secondary school.<p>
+					
+				</div>
+			</div>
 	
 			<br>
 			<br>
