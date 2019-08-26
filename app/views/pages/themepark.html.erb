@@ -32,7 +32,7 @@
 			<div>
 				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
 				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.find(9).id %>
+				<%= f.hidden_field :girl_id, value: 9 %>
 				<br>
 				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
 				<% end %>
@@ -77,7 +77,7 @@ self-motivated and has a thirst for learning that I have not seen in any of my o
 			<div>
 				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
 				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.find(10).id %>
+				<%= f.hidden_field :girl_id, value: 10 %>
 				<br>
 				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
 				<% end %>
@@ -130,7 +130,7 @@ self-motivated and has a thirst for learning that I have not seen in any of my o
 			<div>
 				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
 				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.second.id %>
+				<%= f.hidden_field :girl_id, value: 11 %>
 				<br>
 				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
 				<% end %>
@@ -172,7 +172,7 @@ self-motivated and has a thirst for learning that I have not seen in any of my o
 			<div>
 				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
 				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.third.id %>
+				<%= f.hidden_field :girl_id, value: 12 %>
 				<br>
 				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
 				<% end %>
