@@ -5,13 +5,28 @@
     <title>Insaka</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="grid-container">
+      <div class="nav">
+        <div class="nav-logo">
+          <%= image_tag "logo_white.png", :class => "logo-img"  %>
+        </div>
+        <div class="nav-copy">
+          INCREASING ACCESS TO EDUCATION FOR RURAL ZAMBIAN GIRLS
+        </div>
+        <div class="nav-donate">
+          <div id="nav-donate-button" role="button" tabindex="0">DONATE</div>
+        </div>
+      </div>
+        
+      <%= yield %>
 
+    </div>
   </body>
 </html>
