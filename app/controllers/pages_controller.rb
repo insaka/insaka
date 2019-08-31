@@ -1,22 +1,37 @@
 class PagesController < ApplicationController
+  def home
+  end
+
   def about 
   end
 
-  def application
+  def history
   end
 
-  def candidates
+  def people
   end
 
-  def more
+  def thanks
   end
 
-  def contact
-  end
-
-  def record
+  def whyInsaka
   end
 
   def transparency
+  end
+
+  def femaleEd
+  end
+
+  def waysToHelp
+  end
+
+  def donate
+  end
+
+  def forApplicants
+  end
+
+  def contact
   end
 end
