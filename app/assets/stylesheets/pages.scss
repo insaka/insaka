@@ -11,6 +11,9 @@
     background-color: $black;
     display: grid;
     grid-template-columns: 200px auto 300px;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    border-image: image-url('nav-border.png') 100 repeat;
     div {
       justify-self: center;
       align-self: center;
@@ -41,5 +44,11 @@
         }
       }
     }
+  }
+
+  .test {
+    height: 100px;
+    width: 200px;
+    background-image: image-url("nav-border.png");
   }
 }
