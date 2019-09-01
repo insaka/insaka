@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/pages/ways-to-help/donate' => 'pages#donate'
   get '/pages/for-applicants' => 'pages#forApplicants'
   get '/pages/contact' => 'pages#contact'
+  get '/scholars/index' => 'scholars#index'
 end

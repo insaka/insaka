@@ -5,7 +5,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-rows: 150px auto 500px;
+  grid-template-rows: 150px 80px auto 500px;
   .nav {
     width: 100%;
     background-color: $black;
@@ -33,7 +33,6 @@
         #nav-donate-button {
           cursor: pointer;
           background-color: $yellow;
-          color: #1F2A27;
           height: 61px;
           width: 244px;
           border-radius: 30.5px;
@@ -41,14 +40,34 @@
           line-height: 61px;
           font-size: 25px;
           font-weight: bold;
+          a {
+            color: $black-text;
+          }
         }
       }
     }
   }
 
-  .test {
-    height: 100px;
-    width: 200px;
-    background-image: image-url("nav-border.png");
+  .sub-nav {
+    display: grid;
+    .sub-nav-items {
+      align-self: center;
+      justify-self: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      .sub-nav-item {
+        align-self: center;
+        justify-self: center;
+        color: $black; 
+        font-family: Lato;  
+        font-size: 21px;
+        text-align: center;
+        padding: 20px;
+        a {
+          color: $black; 
+          font-family: Lato;  
+        }
+      }
+    }
   }
 }
