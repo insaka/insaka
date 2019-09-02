@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin fancy-border {
+  border-top: solid 20px transparent;
+  border-bottom: solid 20px transparent;
+  border-image: image-url('nav-border.png') 100 repeat;
+}
+
+@mixin donate-button {
+  background-color: $yellow;
+  border-radius: 30.5px;
+  text-align: center;
+  line-height: 61px;
+  font-size: 25px;
+  font-weight: bold;
+  a {
+    color: $black-text;
+  }
+}

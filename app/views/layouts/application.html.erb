@@ -5,13 +5,91 @@
     <title>Insaka</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
-
+    <div class="grid-container">
+      <div class="nav">
+        <div class="nav-logo">
+          <a href="/"><%= image_tag "logo_white.png", :class => "logo-img"  %></a>
+        </div>
+        <div class="nav-copy">
+          INCREASING ACCESS TO EDUCATION FOR RURAL ZAMBIAN GIRLS
+        </div>
+        <div class="nav-donate">
+          <div id="nav-donate-button" role="button" tabindex="0"><a href="/pages/ways-to-help/donate">DONATE</a></div>
+        </div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-nav-items">
+          <div class="sub-nav-item">
+            <a href="/pages/why-insaka">What We Do</a>
+          </div>
+          <div class="sub-nav-item">
+            <a href="/scholars/index">Our Students</a>
+          </div>
+          <div class="sub-nav-item">
+            <a href="/pages/about">About</a>
+          </div>
+          <div class="sub-nav-item">
+            <a href="/pages/contact">Contact</a>
+          </div>
+        </div>
+      </div>
+        
+      <%= yield %>
+    
+      <div class="footer">
+<!--         <div class="footer-cta">
+          <div class="footer-cta-copy">
+            <div class="rectangle"></div>
+            Can you help?
+          </div>
+          <div class="footer-cta-donate">
+            <div id="footer-donate-button" role="button" tabindex="0"><a href="/pages/ways-to-help/donate">DONATE SECURELY</a>
+            </div>
+          </div>
+          <div class="footer-cta-cards">
+            
+          </div>
+        </div> -->
+        <div class="footer-info">
+          <div class="footer-nav">
+            <ul class="footer-nav-list">
+              <li><a href="/pages/ways-to-help">Ways to Help</a></li>
+              <li><a href="/pages/for-applicants">Nominate a Student</a></li>
+              <li><a href="/pages/why-insaka/transparency">Transpency</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <span id="newsletter-label">Newsletter</span><br />
+            <span id="newsletter-info">Sign up to receive all our latest updates</span>
+            <div id="mc_embed_signup">
+              <form action="https://gmail.us20.list-manage.com/subscribe/post?u=687ebf1e44f9a72e31dc6f7c1&amp;id=d85ef0a141" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+               
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
+                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_687ebf1e44f9a72e31dc6f7c1_d85ef0a141" tabindex="-1" value=""></div>
+                    <button type="submit" id="mce-submit">Find out more <div class="arrow"></div></button>
+                  </div>
+              </form>
+            </div>
+          </div>
+          <div class="footer-icons">
+            <div id="insaka-logo">
+              <%= image_tag "logo_white.png" %>
+            </div>
+            <div id="guidestar-logo">
+              <a href="https://www.guidestar.org/profile/82-2619657" target="_blank"><img src="https://widgets.guidestar.org/gximage2?o=9651803&l=v4" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
