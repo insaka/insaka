@@ -14,42 +14,28 @@
 	<br>
 	<div class="col-sm-12 text-center mx-auto">
 		<h2 class="featurette-heading">Candidates</h2>
+	<hr class="featurette-divider">
+		<p> We are raising money for these four girls, who hope to begin secondary school in 2020. Your donation can go a long way toward getting them into secondary school.</p>
 	</div>
 	<br>
-
-</div>
-		<br>
-	<div class="row featurette">
-		<div class="col-sm-12 text-center mx-auto">
-			<p>We do not currently have any candidates that we are raising money for. Applications will open in mid-2019. Please check back after that for information on the candidates.
-				<br>
-				<br>
-				In the meantime, we are accepting donations for our general fund which pays for things such as administrative fees, postage, promotional materials, etc. If you would like to donate to that, please use the link below.<br>
-			<br>	
-			<div>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="LA3XCAXXDM6DU">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-			</div></p>
-
-		<!--<div class="col-sm-4 text-center mx-auto">
-			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Rosemary.jpg" alt="A Zambian girl preparing to go to high school">
+	<br>
+	<br>
+<div class="row featurette">
+	<div class="col-sm-6 text-center mx-auto">
+			<img class="img-circle img-responsive img-fluid mx-auto img-center height="250" width="250"" src="../images/Blessings 1 compressed.jpg" alt="A Zambian girl preparing to go to high school">
 			<br>
-			<div>
-				Rosemary Chikondwe is from Mutiti village and was nominated by Brooke Cutlan and Precious Katowa. On her application, Rosemary wrote "I know that education is something that can remain with me for life, something I can share with others, and something no one can take away from me. Please help me achieve my dream of being a successful woman in my home country of Zambia." <a href = "../pages/more"><span style="color:blue"> More...</span></a>
-			</div>
+		<div>
+		<p>Blessings Chola is from Kashishi village in Central Province. Her parents are both farmers. Her favorite subject is math and she would like to be an accountant. Her nominator wrote that "Blessings is always the first student to volunteer to help me with any co-curricular activities, participates in every discussion, is not afraid to challenge herself academically and confidently speaks out when she does not understand a concept". She is the top student in her class. Nobody in her family has ever gone beyond Grade 9.<a href = "../pages/more"><span style="color:blue"> More...</span></a></p>
+		</div>
 			<br>
 			<br>
 			
-			<% if Girl.find(9).percent_funded.present? %>
-			<% if (Girl.find(9).percent_funded * 100).ceil/1 < 100 %>
+			<% if Girl.find(11).percent_funded.present? %>
+			<% if (Girl.find(11).percent_funded * 100).ceil/1 < 100 %>
 			<div>
 				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
 				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.find(9).id %>
+				<%= f.hidden_field :girl_id, value: 11 %>
 				<br>
 				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
 				<% end %>
@@ -58,15 +44,15 @@
 			<div class="container-fluid">
 				<div class="progress">
 					<div class="progress-bar progress-bar-striped active" role="progressbar"
-						aria-valuenow="<%= Girl.find(9).percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.find(9).percent_funded * 100%>%">
+						aria-valuenow="<%= Girl.find(11).percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.find(11).percent_funded * 100%>%">
 					</div>
 					</br>
 				</div>
-				Rosemary's secondary education is currently <%=(Girl.find(9).percent_funded * 100).ceil/1 %>% funded
+				Blessing's secondary education is currently <%=(Girl.find(11).percent_funded * 100).ceil/1 %>% funded
 			</div>
 			<%else%>
 			<div class="container-fluid">
-				Rosemary's secondary education is completely funded!
+				Blessing's secondary education is completely funded!
 			</div>
 			<%end%>
 			<%else%>
@@ -74,28 +60,28 @@
 				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 				0% Funded
 			</div>
-
 			<%end%>
 		</div>
-
 		<hr>
-		<div class="col-sm-4 text-center mx-auto">
-			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Stephania_copy.jpg" alt="A Zambian girl preparing to go to high school">
+		<div class="col-sm-6 text-center mx-auto">
+			<img class="img-circle img-responsive img-fluid mx-auto img-center height="250" width="250"" src="../images/Gladys compressed.jpeg" alt="A Zambian girl preparing to go to high school">
 			<br>
 			<div>
-				Stephania Bwalya is currently the head girl at Mutwewankoko Primary School in Mansa district. She has four brothers and her mother is a widow. She enjoys math because "...it is easy to understand and I enjoy problem solving.” She hopes to eventually become a nurse and "help the poor people who are in need."<a href = "../pages/more"><span style="color:blue"> More...</span></a>
+				<p>Gladys Mukosh is from Chibukuma village in Central Province. Her parents raise and sell vegetables. Of school, Gladys writes "My favorite subjects are English and Computer Science because they are difficult and they make me learn the most". Her nominator writes that "Gladys is
+self-motivated and has a thirst for learning that I have not seen in any of my other students". Gladys would like to be a nurse."<a href = "../pages/more"><span style="color:blue"> More...</span></a>
+			<br>
+			<br>
 			</div>
 			<br>
 			<br>
 			<br>
-			<br>
 			
-			<% if Girl.find(10).percent_funded.present? %>
-			<% if (Girl.find(10).percent_funded * 100).ceil/1 < 100 %>
+			<% if Girl.find(12).percent_funded.present? %>
+			<% if (Girl.find(12).percent_funded * 100).ceil/1 < 100 %>
 			<div>
 				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
 				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.find(10).id %>
+				<%= f.hidden_field :girl_id, value: 12 %>
 				<br>
 				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
 				<% end %>
@@ -104,15 +90,15 @@
 			<div class="container-fluid">
 				<div class="progress">
 					<div class="progress-bar progress-bar-striped active" role="progressbar"
-						aria-valuenow="<%= Girl.find(10).percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.find(10).percent_funded * 100%>%">
+						aria-valuenow="<%= Girl.find(12).percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.find(12).percent_funded * 100%>%">
 					</div>
 					</br>
 				</div>
-				Stephania's secondary education is currently <%=(Girl.find(10).percent_funded * 100).ceil/1 %>% funded
+				Glady's secondary education is currently <%=(Girl.find(12).percent_funded * 100).ceil/1 %>% funded
 			</div>
 			<%else%>
 			<div class="container-fluid">
-				Stephania's secondary education is completely funded!
+				Gladys's secondary education is completely funded!
 			</div>
 			<%end%>
 			<%else%>
@@ -127,8 +113,101 @@
 		<br>
 		<br>
 	</div>
-
+</div>
 <div>
+	<div class="row featurette">
+			<br>
+			<br>
+		<div class="col-sm-6 text-center mx-auto">
+			<br>
+		<br>
+		<br>
+			<img class="img-circle img-responsive img-fluid mx-auto img-center height="250" width="250"" src="../images/Purity compressed.jpeg" alt="A Zambian girl preparing to go to high school">
+			<br>
+			<div>
+				<p>Kabaso Purity is from Mutiti in Luapula Province. She does well in school and takes it very seriously. She hopes to a be a teacher one day and especially likes science. She is an orphan, one of ten children.<a href = "../pages/more"><span style="color:blue"> More...</span></a></p>
+			</div>
+			<br>
+			<% if Girl.find(13).percent_funded.present? %>
+			<% if (Girl.find(13).percent_funded * 100).ceil/1 < 100 %>
+			<div>
+				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
+				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
+				<%= f.hidden_field :girl_id, value: 13 %>
+				<br>
+				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
+				<% end %>
+			</div>
+			<br>
+			<div class="container-fluid">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped active" role="progressbar"
+						aria-valuenow="<%= Girl.find(13).percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.find(13).percent_funded * 100%>%">
+					</div>
+					</br>
+				<br>
+				<br>
+				</div>
+				Kabaso's secondary education is currently <%=(Girl.find(13).percent_funded * 100).ceil/1 %>% funded
+			</div>
+			<%else%>
+			<div class="container-fluid">
+				Kabaso's secondary education is completely funded!
+			</div>
+			<%end%>
+			<%else%>
+			<div class="progress-bar progress-bar-striped active" role="progressbar"
+				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				0% Funded
+			</div>
+			<%end%>
+		</div>
+		<div class="col-sm-6 text-center mx-auto">
+			<br>
+			<br>
+			<br>
+			<img class="img-circle img-responsive img-fluid mx-auto img-center height="250" width="250"" src="../images/Anna Compressed.jpeg" alt="A Zambian girl preparing to go to high school">
+			<div>
+				<p>Anna Kunda is from Kamima in Central Province. She is one of nine children and both her parents are farmers. Her favorite subject is math and she dreams of being an accountant or bank manager. Her nominator writes that Anna is very smart and dedicated to her school work. All of her family's cattle died recently, leaving them unable to pay for her schooling.<a href = "../pages/more"><span style="color:blue"> More...</span></a></p>
+			</div>
+	<br>
+			<br>
+			<% if Girl.find(14).percent_funded.present? %>
+			<% if (Girl.find(14).percent_funded * 100).ceil/1 < 100 %>
+			<div>
+				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
+				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
+				<%= f.hidden_field :girl_id, value: 14 %>
+				<br>
+				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
+				<% end %>
+			</div>
+			<br>
+			<div class="container-fluid">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped active" role="progressbar"
+						aria-valuenow="<%= Girl.find(14).percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.find(14).percent_funded * 100%>%">
+					</div>
+					</br>
+				</div>
+				Anna's secondary education is currently <%=(Girl.find(14).percent_funded * 100).ceil/1 %>% funded
+			</div>
+			<%else%>
+			<div class="container-fluid">
+				Anna's secondary education is completely funded!
+			</div>
+			<%end%>
+			<%else%>
+			<div class="progress-bar progress-bar-striped active" role="progressbar"
+				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				0% Funded
+			</div>
+			<%end%>
+		</div>
+		<hr>
+	</div>
+
+
 		<div class="row featurette">
 			<div class="col-sm-12 text-center mx-auto">
 				<br>
@@ -136,147 +215,9 @@
 				<p>We are trying to raise $1,250 for each girl which will cover all three years of secondary school.<p>
 					
 				</div>
-			</div>	
-
-
-	<hr class="featurette-divider">
-<div class="col-sm-12 text-center mx-auto">
-	<br>
-		<h2 class="featurette-heading">Already Funded for 2019</h2>
-	<br>
-	<p>We have already raised enough money for these girls' secondary school educations</p>
-	</div>
-
-
-	<div class="row featurette">
-		<div class="col-sm-4 text-center mx-auto">
-			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Rabecca3-min.jpg" alt="A Zambian girl preparing to go to high school">
-			<br>
-			<div>
-				Rabbeca Chisha is from Mutiti village in Mansa district. Rabbeca’s mother died when she was young and since then she has lived with caretakers in her village who have children of their own and are unable to fund any further education. When asked about favorite subjects, Rebecca said she likes both math and English and might like to be a journalist.
-			</div>
-			<br>
-			<br>
-			<% if Girl.first.percent_funded.present? %>
-			<% if (Girl.first.percent_funded * 100).ceil/1 < 100 %>
-			<div>
-				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
-				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.first.id %>
-				<br>
-				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
-				<% end %>
-			</div>
-			<br>
-			<div class="container-fluid">
-				<div class="progress">
-					<div class="progress-bar progress-bar-striped active" role="progressbar"
-						aria-valuenow="<%= Girl.first.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.first.percent_funded * 100%>%">
-					</div>
-					</br>
-				</div>
-				Rabbeca's secondary education is currently <%=(Girl.first.percent_funded * 100).ceil/1 %>% funded
-			</div>
-			<%else%>
-			<div class="container-fluid">
-				Rabbeca's secondary education is completely funded!
-			</div>
-			<%end%>
-			<%else%>
-			<div class="progress-bar progress-bar-striped active" role="progressbar"
-				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-				0% Funded
-			</div>
-			<%end%>
-		</div>
-		<div class="col-sm-4 text-center mx-auto">
-			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Susan5.jpg" alt="A Zambian girl preparing to go to high school">
-			<br>
-			<div>
-				Susan Moyo is 14 and goes to school in Mkushi district at Milombwe. She is the oldest girl in a family with 7 children. Susan would like to eventually become a teacher and mentioned several times how important it is to her to set an example for her younger siblings.
-			</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<% if Girl.second.percent_funded.present? %>
-			<% if (Girl.second.percent_funded * 100).ceil/1 < 100 %>
-			<div>
-				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
-				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.second.id %>
-				<br>
-				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
-				<% end %>
-			</div>
-			<br>
-			<div class="container-fluid">
-				<div class="progress">
-					<div class="progress-bar progress-bar-striped active" role="progressbar"
-						aria-valuenow="<%= Girl.second.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.second.percent_funded * 100%>%">
-					</div>
-					</br>
-				<br>
-				<br>
-				</div>
-				Susan's secondary education is currently <%=(Girl.second.percent_funded * 100).ceil/1 %>% funded
-			</div>
-			<%else%>
-			<div class="container-fluid">
-				Susan's secondary education is completely funded!
-			</div>
-			<%end%>
-			<%else%>
-			<div class="progress-bar progress-bar-striped active" role="progressbar"
-				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-				0% Funded
-			</div>
-			<%end%>
-		</div>
-		<div class="col-sm-4 text-center mx-auto">
-			<img class="img-circle img-responsive img-fluid mx-auto img-center max-width:100% height:auto" src="../images/Caesinah(4).jpg" alt="A Zambian girl preparing to go to high school">
-			<br>
-			<div>
-				This is Caesinah Chalwe. Caesinah and her younger sister live with their grandmother who is a farmer in Kabamba, in Serenje district. Caesinah is 15 and says "Science is my favorite subject. I want to become a nurse so I like learning about the human body. I want to complete senior secondary because I know education is important. I want to work in full employment and even go to college.
 			</div>
 	
 			<br>
-			<% if Girl.third.percent_funded.present? %>
-			<% if (Girl.third.percent_funded * 100).ceil/1 < 100 %>
-			<div>
-				<%= form_for @donation ||= Donation.new, html: { class: "basic-grey" } do |f| %>
-				<%= text_field(:donation, :amount, placeholder: "enter amount here")%>
-				<%= f.hidden_field :girl_id, value: Girl.third.id %>
-				<br>
-				<%= f.submit "Donate", class: "btn", style: "color: white;background: rgb(30, 97, 155);" %>
-				<% end %>
-			</div>
-			<br>
-			<div class="container-fluid">
-				<div class="progress">
-					<div class="progress-bar progress-bar-striped active" role="progressbar"
-						aria-valuenow="<%= Girl.third.percent_funded %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= Girl.third.percent_funded * 100%>%">
-					</div>
-					</br>
-				</div>
-				Caesinah's secondary education is currently <%=(Girl.third.percent_funded * 100).ceil/1 %>% funded
-			</div>
-			<%else%>
-			<div class="container-fluid">
-				Caesinah's secondary education is completely funded!
-			</div>
-			<%end%>
-			<%else%>
-			<div class="progress-bar progress-bar-striped active" role="progressbar"
-				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-				0% Funded
-			</div>
-			<%end%>
-		</div>
-		<hr>
-	</div>
-	
-			<br>-->
 			<br>
 			<hr class="featurette-divider">
 			
