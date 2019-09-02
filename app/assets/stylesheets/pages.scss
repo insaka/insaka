@@ -176,5 +176,47 @@
       }
     }
   }
+}
 
+#donate-modal {
+  // display: none;
+  position: fixed;
+  display: block;
+  z-index: 300;
+  background-color: rgba(67, 68, 68, .7);
+  height: 100%;
+  width: 100%;
+
+  #donate-form {
+    background-color: $black;
+    width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 10% 60% 20% 10%;
+    //grid-column-gap: 25px;
+    @include fancy-border;
+
+    .donate-form-row {
+      &.left {
+        grid-column: 2 / 3;
+      }
+
+      &.right {
+        grid-column: 3 / 4;
+      }
+
+      #form-logo {
+        height: 70px;
+        width: 70px;
+        margin-right: 25px;
+      }
+
+      #donate-form-label {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 900;
+        font-family: 'Lato';
+      }
+    }
+  }
 }
