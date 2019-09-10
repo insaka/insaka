@@ -14,7 +14,7 @@
   <body>
     <div id="donate-modal">
       <div id="donate-form">
-        <div class="donate-form-row">
+        <div class="donate-form-row tall">
           <div id="form-logo-holder">
             <%= image_tag "logo_white.png", :id => "form-logo" %>
           </div>
@@ -23,11 +23,11 @@
             Close <span id="close-button-x">X</span> 
           </div>
         </div>
-        <div class="donate-form-row">
+        <div class="donate-form-row short">
           <div class="form-field-label left">Which Student?</div>
           <div class="form-field-label right">Amount ($)</div>
         </div>
-        <div class="donate-form-row">
+        <div class="donate-form-row short">
           <div class="donate-form-field left">
             <select id="student">
               <option value=""></option>
@@ -38,6 +38,54 @@
           </div>
           <div class="donate-form-field right">
             <input type="number" id="donate-amount">
+          </div>
+        </div>
+        <div class="donate-form-row tall">
+          <div class='form-section-label'>Card Details</div>
+        </div>
+        <div class="donate-form-row short">
+          <div class="form-field-label left">Card number</div>
+        </div>
+        <div class="donate-form-row short">
+          <div class="donate-form-field left">
+            <input type="text" id="cc-number" >
+          </div>
+        </div>
+        <div class="donate-form-row short">
+          <div class="form-field-label left">
+            Expiry month
+          </div>
+          <div class="form-field-label left">
+            Expiry year
+          </div>
+        </div>
+        <div class="donate-form-row short">
+          <div class="donate-form-field left">
+            <select id="cc-month">
+              <option value=""></option>
+              <option value="jan">January</option>
+              <option value="feb">February</option>
+              <option value="mar">March</option>
+              <option value="apr">April</option>
+              <option value="may">May</option>
+              <option value="jun">June</option>
+              <option value="jul">July</option>
+              <option value="aug">August</option>
+              <option value="sep">September</option>
+              <option value="oct">October</option>
+              <option value="nov">November</option>
+              <option value="dec">December</option>
+            </select>
+          </div>
+          <div class="donate-form-field right">
+            <select id="cc-year">
+              <option value=""></option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+            </select>
           </div>
         </div>
       </div>

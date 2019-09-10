@@ -199,8 +199,14 @@
     .donate-form-row {
       flex: 1;
       width: 100%;
-      padding: 20px;
       display: flex;
+      &.tall {
+        padding: 20px;
+      }
+
+      &.short {
+        padding: 10px 20px;
+      }
       #form-logo {
         height: 70px;
         width: 70px;
@@ -251,10 +257,11 @@
 
       .donate-form-field {
 
-        select {
+        select, input {
           width: 90%;
           height: 65px;
           background-color: #fff;
+          font-size: 22px;
           border: 0;
           border-radius: 0;
           -webkit-appearance: none;
@@ -273,6 +280,12 @@
           width: 5px;
           border: $yellow;
         }
+      }
+
+      .form-section-label {
+        font-size: 34px;
+        color: #fff;
+        font-weight: bold;
       }
     }
   }
