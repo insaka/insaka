@@ -14,13 +14,30 @@
   <body>
     <div id="donate-modal">
       <div id="donate-form">
-        <div class="donate-form-row left">
-          <%= image_tag "logo_white.png", :id => "form-logo" %>
+        <div class="donate-form-row">
+          <div id="form-logo-holder">
+            <%= image_tag "logo_white.png", :id => "form-logo" %>
+          </div>
           <span id="donate-form-label">DONATE</span>
-        </div>
-        <div class="donate-form-row right">
           <div id="close-button">
-            Close 
+            Close <span id="close-button-x">X</span> 
+          </div>
+        </div>
+        <div class="donate-form-row">
+          <div class="form-field-label left">Which Student?</div>
+          <div class="form-field-label right">Amount ($)</div>
+        </div>
+        <div class="donate-form-row">
+          <div class="donate-form-field left">
+            <select id="student">
+              <option value=""></option>
+              <option value="student1">Student 1</option>
+              <option value="student2">Student 2</option>
+              <option value="student3">Student 3</option>
+            </select>
+          </div>
+          <div class="donate-form-field right">
+            <input type="number" id="donate-amount">
           </div>
         </div>
       </div>
