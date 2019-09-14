@@ -30,7 +30,7 @@
       }
       &.nav-donate {
         #nav-donate-button {
-          // cursor: pointer;
+          cursor: pointer;
           // background-color: $yellow;
           @include donate-button;
           height: 61px;
@@ -179,15 +179,16 @@
 }
 
 #donate-modal {
-  // display: none;
+  opacity: 0;
   position: absolute;
-  display: block;
-  z-index: 300;
+  z-index: -5;
   background-color: rgba(67, 68, 68, .7);
   height: 100%;
   width: 100%;
-
+  
   #donate-form {
+    transition: transform .5s ease-in-out;
+    transform: tranlateY(-200px);
     background-color: $black;
     width: 800px;
     margin: auto;
@@ -299,5 +300,32 @@
         margin: auto;
       }
     }
+  }
+
+  &.visible {
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+    #donate-form {
+      transform: translateY(0);
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    z-index: -5;
+  }
+
+  5% {
+    z-index: 300;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 300;
   }
 }
