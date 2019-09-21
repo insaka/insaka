@@ -3,7 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
 @import "mixins";
+@import "animations";
 
+// Begin nav bar styles
 .grid-container {
   display: grid;
   grid-template-rows: 150px 80px auto auto;
@@ -31,18 +33,9 @@
       &.nav-donate {
         #nav-donate-button {
           cursor: pointer;
-          // background-color: $yellow;
           @include donate-button;
           height: 61px;
           width: 244px;
-          // border-radius: 30.5px;
-          // text-align: center;
-          // line-height: 61px;
-          // font-size: 25px;
-          // font-weight: bold;
-          // a {
-          //   color: $black-text;
-          // }
         }
       }
     }
@@ -71,6 +64,7 @@
     }
   }
 
+  // Footer styles
   .footer {
     display: grid;
     grid-template-rows: 260px;
@@ -177,6 +171,8 @@
     }
   }
 }
+
+// Donate Modal
 
 #donate-modal {
   opacity: 0;
@@ -313,19 +309,37 @@
   }
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    z-index: -5;
+// Begin homepage styles 
+#top-hero {
+  background-image: image-url('homepage-hero.JPG');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 65% 50%;
+  height: 700px;
+  width: 100%;
+  .hero-left {
+    z-index: 2;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    width: 500px;
+    height: 100%;
   }
+  .hero-info {
+    font-family: 'Lato';
+    font-size: 47px;  
+    font-weight: 900;
+    color: #fff;
+    .blue-square {
+      position: absolute;
+      z-index: 2;
+      background-color: #5AB8FF;
+      height: 200px;
+      width: 200px;
+    }
+    .hero-info-text {
+      z-index: 3;
+      height: 280px;  
+      width: 387px;
+    }
 
-  5% {
-    z-index: 300;
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    z-index: 300;
   }
 }
