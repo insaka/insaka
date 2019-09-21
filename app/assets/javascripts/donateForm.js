@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('turbolinks:load', function() {
+  console.log("turbo loading?");
   var donateButtons = document.querySelectorAll('.donate-button')
   var modal = document.getElementById('donate-modal');
   var close = document.getElementById('close-button');
