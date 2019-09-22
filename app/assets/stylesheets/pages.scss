@@ -139,20 +139,10 @@
           color: $black-text;
         }
         #mce-submit {
-          height: 50px;
-          background-color: $black;
-          border: 2px solid $blue;
-          font-family: "Source Sans Pro";
-          font-size: 22px;
-          color: #fff;
+          @include blueButton;
 
           .arrow {
-            height: 14px;
-            width: 14px;
-            border-top: solid 4px #ffc101;
-            border-right: solid 4px #ffc101;
-            display: inline-block;
-            transform: rotate(45deg);
+            @include arrow;
           }
         }
       }
@@ -358,5 +348,54 @@
       padding: 50px 50px 50px 150px;
       opacity: .5;
     }
+  }
+}
+
+#continental {
+  height: 700px;
+  width: 100%;
+  background-image: image-url('yellow-zambia.png');
+  background-color: #434444;
+  background-repeat: no-repeat;
+  background-position: 100% 150%;
+  margin-top: -150px;
+  z-index: 5;
+  -webkit-clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
+  .continental-copy {
+    width: 400px;
+    margin-top: 150px;
+    margin-left: 150px;
+    color: #fff;
+    font-family: 'Lato';
+    h2 {
+      display: inline-block;
+    }
+
+    .continental-button {
+      @include blueButton;
+      margin-top: 50px;
+      width: 200px;
+      text-align: center;
+      line-height: 50px;
+      a {
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+      }
+      .arrow {
+        @include arrow;
+      }
+      &:hover {
+        background-color: $blue;
+      }
+    }
+  }
+  .bullet {
+    @include bullet;
+    display: inline-block;
+    margin-left: -40px;
+    margin-right: 15px;
   }
 }
