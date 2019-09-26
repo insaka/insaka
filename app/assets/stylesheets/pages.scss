@@ -354,10 +354,11 @@
 #continental {
   height: 700px;
   width: 100%;
-  background-image: image-url('yellow-zambia.png');
+  background-image: image-url('yellow-zambia.png'), image-url('village-scene.png');
   background-color: #434444;
   background-repeat: no-repeat;
-  background-position: 100% 150%;
+  background-position: 100% 150%, 50% 101%;
+  background-size: auto, contain;
   margin-top: -150px;
   z-index: 5;
   -webkit-clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
@@ -399,3 +400,37 @@
     margin-right: 15px;
   }
 }
+
+#zam-facts {
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+
+  #meeple-holder {
+    flex: 2;
+    background-image: image-url('meeples.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    margin-left: 25px;
+  }
+
+  #facts {
+    flex: 1;
+    text-align: center;
+    font-family: 'Lato';
+    p {
+      color: #fff;
+      font-size: 28px;
+      line-height: 30px;
+      span.big-text {
+        color: $black;
+        font-size: 180px;
+        line-height: 180px;
+      } 
+    }
+  }
+}
+
