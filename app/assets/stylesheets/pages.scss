@@ -434,3 +434,26 @@
   }
 }
 
+#zam-separator {
+  width: 100%;
+  background-color: $blue;
+  border-bottom: solid 20px transparent;
+  border-image: image-url('triangle-border-cropped.png') 100 stretch;
+}
+
+#what-can-i-do {
+  display: flex;
+  background-color: #fff;
+  #what-copy {
+    flex: 1;
+    #what-copy-text {
+      padding: 25px;
+      .bullet {
+        @include bullet;
+        display: inline-block;
+        margin-left: -40px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
