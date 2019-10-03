@@ -18,3 +18,28 @@
     color: $black-text;
   }
 }
+
+@mixin bullet {
+  height: 17px;
+  width: 17px;
+  border: 6px solid #FFC100;
+  transform: rotate(315deg);
+}
+
+@mixin arrow {
+  height: 14px;
+  width: 14px;
+  border-top: solid 4px #ffc101;
+  border-right: solid 4px #ffc101;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+@mixin blueButton {
+  height: 50px;
+  background-color: $black;
+  border: 2px solid $blue;
+  font-family: "Source Sans Pro";
+  font-size: 22px;
+  color: #fff;
+}

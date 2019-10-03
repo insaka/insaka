@@ -3,7 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
 @import "mixins";
+@import "animations";
 
+// Begin nav bar styles
 .grid-container {
   display: grid;
   grid-template-rows: 150px 80px auto auto;
@@ -31,18 +33,9 @@
       &.nav-donate {
         #nav-donate-button {
           cursor: pointer;
-          // background-color: $yellow;
           @include donate-button;
           height: 61px;
           width: 244px;
-          // border-radius: 30.5px;
-          // text-align: center;
-          // line-height: 61px;
-          // font-size: 25px;
-          // font-weight: bold;
-          // a {
-          //   color: $black-text;
-          // }
         }
       }
     }
@@ -71,6 +64,7 @@
     }
   }
 
+  // Footer styles
   .footer {
     display: grid;
     grid-template-rows: 260px;
@@ -145,20 +139,10 @@
           color: $black-text;
         }
         #mce-submit {
-          height: 50px;
-          background-color: $black;
-          border: 2px solid $blue;
-          font-family: "Source Sans Pro";
-          font-size: 22px;
-          color: #fff;
+          @include blueButton;
 
           .arrow {
-            height: 14px;
-            width: 14px;
-            border-top: solid 4px #ffc101;
-            border-right: solid 4px #ffc101;
-            display: inline-block;
-            transform: rotate(45deg);
+            @include arrow;
           }
         }
       }
@@ -177,6 +161,8 @@
     }
   }
 }
+
+// Donate Modal
 
 #donate-modal {
   opacity: 0;
@@ -313,19 +299,138 @@
   }
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    z-index: -5;
+// Begin homepage styles 
+#top-hero {
+  background-image: image-url('homepage-hero.JPG');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 65% 50%;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  .hero-left {
+    z-index: 2;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    width: 500px;
+    height: 100%;
+    flex: 2;
+    .hero-info {
+      font-family: 'Lato';
+      font-size: 47px;  
+      font-weight: 900;
+      color: #fff;
+      .blue-square {
+        position: absolute;
+        z-index: 2;
+        background-color: #5AB8FF;
+        height: 200px;
+        width: 200px;
+        margin-top: 175px;
+        margin-left: 75px;
+      }
+      .hero-info-text {
+        z-index: 3;
+        height: 280px;  
+        width: 387px;
+        position: absolute;
+        line-height: 50px;
+        margin-top: 200px;
+        margin-left: 125px;
+      }
+    }
   }
-
-  5% {
-    z-index: 300;
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    z-index: 300;
+  .hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .hero-guidestar {
+      padding: 50px 50px 50px 150px;
+      opacity: .5;
+    }
   }
 }
+
+#continental {
+  height: 700px;
+  width: 100%;
+  background-image: image-url('yellow-zambia.png'), image-url('village-scene.png');
+  background-color: #434444;
+  background-repeat: no-repeat;
+  background-position: 100% 150%, 50% 101%;
+  background-size: auto, contain;
+  margin-top: -150px;
+  z-index: 5;
+  -webkit-clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
+  .continental-copy {
+    width: 400px;
+    margin-top: 150px;
+    margin-left: 150px;
+    color: #fff;
+    font-family: 'Lato';
+    h2 {
+      display: inline-block;
+    }
+
+    .continental-button {
+      @include blueButton;
+      margin-top: 50px;
+      width: 200px;
+      text-align: center;
+      line-height: 50px;
+      a {
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+      }
+      .arrow {
+        @include arrow;
+      }
+      &:hover {
+        background-color: $blue;
+      }
+    }
+  }
+  .bullet {
+    @include bullet;
+    display: inline-block;
+    margin-left: -40px;
+    margin-right: 15px;
+  }
+}
+
+#zam-facts {
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+
+  #meeple-holder {
+    flex: 2;
+    background-image: image-url('meeples.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    margin-left: 25px;
+  }
+
+  #facts {
+    flex: 1;
+    text-align: center;
+    font-family: 'Lato';
+    p {
+      color: #fff;
+      font-size: 28px;
+      line-height: 30px;
+      span.big-text {
+        color: $black;
+        font-size: 180px;
+        line-height: 180px;
+      } 
+    }
+  }
+}
+
