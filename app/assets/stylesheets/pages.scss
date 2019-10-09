@@ -442,17 +442,38 @@
 }
 
 #what-can-i-do {
-  display: flex;
   background-color: #fff;
   #what-copy {
-    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      margin: 25px;
+    }
     #what-copy-text {
+      flex: 2;
       padding: 25px;
+      //width: 600px;
+      margin-left: 150px;
+      font-family: 'Lato';
+      h2 {
+        display: inline-block;
+      }
       .bullet {
         @include bullet;
         display: inline-block;
         margin-left: -40px;
         margin-right: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    #what-copy-donate {
+      flex: 1;
+
+      #donate-button {
+        @include donate-button;
       }
     }
   }
