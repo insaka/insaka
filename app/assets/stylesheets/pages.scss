@@ -443,6 +443,8 @@
 
 #what-can-i-do {
   background-color: #fff;
+  // -webkit-clip-path: polygon(100% 0, 100% 57%, 0 100%, 0 0);
+  // clip-path: polygon(100% 0, 100% 57%, 0 100%, 0 0);
   #what-copy {
     display: flex;
     align-items: center;
@@ -476,5 +478,74 @@
         @include donate-button;
       }
     }
+  }
+}
+
+#photo-gallery {
+  background: linear-gradient(165deg, white 25%, $black 25% 100%);
+  // background-image: image-url('IMG_6299.JPG');
+  // -webkit-clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
+  // clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
+  width: 100%;
+  height: 1200px;
+  background-size: contain; 
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: auto 600px 400px auto;
+  grid-template-rows: repeat(6, 200px);
+
+  .photo-gal-photo {
+    margin: 10px;
+  }
+
+  #photo-wide-1 {
+    background-image: image-url('IMG_9067.JPG');
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #photo-tall-1 {
+    background-image: image-url('rabecca-rosemary.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+  }
+
+  #photo-wide-2 {
+    background-image: image-url('IMG_9702.JPG');
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: span 2;
+  }
+
+  #photo-tall-2 {
+    // background-image: image-url('IMG_8987.JPG');
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: span 3;
+  }
+
+  #photo-wide-3 {
+    background-image: image-url("IMG_8970.JPG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: span 2;
   }
 }
