@@ -68,36 +68,7 @@
   .footer {
     display: grid;
     grid-template-rows: 260px;
-    // .footer-cta {
-    //   display: grid;
-    //   grid-template-columns: 1fr 1fr 1fr;
-    //   align-items: center;
-    //   justify-content: center;
-    //   @include fancy-border;
-    //   .footer-cta-copy {
-    //     color: $black-text; 
-    //     font-family: Lato;  
-    //     font-size: 34px;  
-    //     font-weight: bold;
-    //     text-align: center;
-    //     .rectangle {
-    //       height: 17px;
-    //       width: 17px;
-    //       border: 6px solid #FFC100;
-    //       transform: rotate(315deg);
-    //       display: inline-block;
-    //       margin-right: 25px;
-    //     }
-    //   }
 
-    //   .footer-cta-donate {
-    //     justify-self: center;
-    //     #footer-donate-button {
-    //       @include donate-button;
-    //       width: 340px;
-    //     }
-    //   }
-    // }
     .footer-info {
       background-color: $black;
       display: grid;
@@ -434,3 +405,238 @@
   }
 }
 
+#zam-separator {
+  width: 100%;
+  background-color: $blue;
+  border-bottom: solid 20px transparent;
+  border-image: image-url('triangle-border-cropped.png') 100 stretch;
+}
+
+#what-can-i-do {
+  background-color: #fff;
+  // -webkit-clip-path: polygon(100% 0, 100% 57%, 0 100%, 0 0);
+  // clip-path: polygon(100% 0, 100% 57%, 0 100%, 0 0);
+  #what-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      margin: 25px;
+    }
+    #what-copy-text {
+      flex: 2;
+      padding: 25px;
+      //width: 600px;
+      margin-left: 150px;
+      font-family: 'Lato';
+      h2 {
+        display: inline-block;
+      }
+      .bullet {
+        @include bullet;
+        display: inline-block;
+        margin-left: -40px;
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    #what-copy-donate {
+      flex: 1;
+
+      #donate-button {
+        @include donate-button;
+      }
+    }
+  }
+}
+
+#photo-gallery {
+  background: linear-gradient(165deg, white 25%, $black 25% 100%);
+  width: 100%;
+  height: auto;
+  background-size: contain; 
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: auto 600px 400px auto;
+  grid-template-rows: repeat(7, 200px) 100px;
+
+  .photo-gal-photo {
+    margin: 10px;
+    z-index: 2;
+  }
+
+  #photo-wide-1 {
+    background-image: image-url('IMG_9067.JPG');
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #photo-tall-1 {
+    background-image: image-url('rabecca-rosemary.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+  }
+
+  #photo-wide-2 {
+    background-image: image-url('IMG_9702.JPG');
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: span 2;
+  }
+
+  #photo-tall-2 {
+    // background-image: image-url('IMG_8987.JPG');
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: span 3;
+  }
+
+  #photo-wide-3 {
+    background-image: image-url("IMG_8970.JPG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: span 2;
+  }
+
+  #photo-gallery-cont {
+    background-image: image-url('IMG_6299.JPG');
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $black;
+    margin-top: -200px;
+    -webkit-clip-path: polygon(0 33%, 100% 0%, 100% 100%, 0 67%);
+    clip-path: polygon(0 33%, 100% 0%, 100% 100%, 0 67%);
+    z-index: 1;
+    height: 500px;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 7;
+
+    #see-all {
+      border-radius: 30.5px;
+      text-align: center;
+      background-color: #fff;
+      width: 220px;
+      font-family: Lato;
+      color: $black;
+      margin: 250px auto;
+      height: 60px;
+      font-size: 22px;
+      line-height: 60px;
+      cursor: pointer;
+    }
+  }
+}
+
+#where {
+  background-color: $black;
+
+  #where-header {
+    width: 100%;
+    color: #fff;
+    font-family: Lato;
+    font-size: 33px;
+    padding: 0 100px;
+
+    .bullet {
+      @include bullet;
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+
+  #where-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .where-box {
+      flex: 1;
+      color: $yellow;
+      border: solid 5px $blue;
+      height: 300px;
+      width: 500px;
+      margin: 50px;
+      text-align: center;
+      font-size: 180px;
+      font-weight: bold;
+
+      &#tuition {
+        background: linear-gradient($black 10%, rgba(255, 255, 255, .13) 10% 100%);
+      }
+
+      &#operation {
+        background: linear-gradient(rgba(255, 255, 255, .13) 10%, $black 10% 100%);
+      }
+
+      p.smaller-text {
+        font-size: 30px;
+        color: white;
+        margin-top: -50px;
+      }
+    }
+  }
+}
+
+.footer-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  @include fancy-border;
+  .footer-cta-copy {
+    color: $black-text; 
+    font-family: Lato;  
+    font-size: 34px;  
+    font-weight: bold;
+    text-align: center;
+    .rectangle {
+      height: 17px;
+      width: 17px;
+      border: 6px solid #FFC100;
+      transform: rotate(315deg);
+      display: inline-block;
+      margin-right: 25px;
+    }
+  }
+
+  .footer-cta-donate {
+    justify-self: center;
+    #footer-donate-button {
+      @include donate-button;
+      width: 340px;
+    }
+  }
+
+  .footer-cta-cards {
+    img {
+      width: 255px;
+      display: block;
+      margin: auto;
+    }
+  }
+}
