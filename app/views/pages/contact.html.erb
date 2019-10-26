@@ -1,3 +1,7 @@
+<% if @sent %>
+  <h1>Message sent</h1>
+<% end %>
+
 <div id="contact">
   <div class="hero-image">
     <div class="hero-text">
@@ -8,24 +12,25 @@
     </div>
   </div>
   <div id="contact-form-holder">
-    <form id="contact-form">
+    <%= form_tag "/contact", method: :post, id: "contact-form" do %>
       <div class="form-line">
-        <label for="name">Name</label>
-        <input id="name" type='text' />
+        <%= label_tag :name %>
+        <%= text_field_tag :name, nil, type: 'text' %>
       </div>
       <div class="form-line">
-
-        <label for="email">Email</label>
-        <input id="email" type="email">
+        <%= label_tag :email %>
+        <%= text_field_tag :email, nil, type: 'email', :required => true %>
       </div>
       <div class="form-line">
-        <label for="message">Message</label>
-        <textarea rows='4' id="message">
-        </textarea>
+        <%= label_tag :message %>
+        <%= text_area_tag :message, nil, rows: 4, :required => true %>
+<!--         <label for="message">Message</label>
+        <textarea rows='4' id="message" required>
+        </textarea> -->
       </div>
       <div class="form-line">
         <button type="submit" id="contact-button">Send</button>
       </div>
-    </form>
+    <% end %>
   </div>
 </div>
