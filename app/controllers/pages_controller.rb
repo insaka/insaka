@@ -41,15 +41,12 @@ class PagesController < ApplicationController
     emailName = params[:name]
     message = params[:message]
 
-    mail = Mail.new do
+    Mail.deliver do
       from     email
       to       'wabray17@gmail.com'
       subject  'New Message from Insaka.com from ' + emailName
       body     message
     end
-
-    mail.delivery_method :sendmail
-    mail.deliver
 
     redirect_to controller: 'pages', action: 'contact', sent: 'true'
   end
