@@ -33,5 +33,21 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @sent = params[:sent] === 'true'
+  end
+
+  def sendmessage
+    email = params[:email]
+    emailName = params[:name]
+    message = params[:message]
+
+    Mail.deliver do
+      from     email
+      to       'wabray17@gmail.com'
+      subject  'New Message from Insaka.com from ' + emailName
+      body     message
+    end
+
+    redirect_to controller: 'pages', action: 'contact', sent: 'true'
   end
 end

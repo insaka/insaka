@@ -325,7 +325,7 @@
 #continental {
   height: 700px;
   width: 100%;
-  background-image: image-url('yellow-zambia.png'), image-url('village-scene.png');
+  background-image: image-url('yellow-zambia.png'), image-url('blue-village-scene.png');
   background-color: #434444;
   background-repeat: no-repeat;
   background-position: 100% 150%, 50% 101%;
@@ -637,6 +637,62 @@
       width: 255px;
       display: block;
       margin: auto;
+    }
+  }
+}
+
+/******** Contact Us Page *********/ 
+#contact {
+  background-image: image-url('village-scene.png');
+  background-position: 50% 101%;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .hero-image {
+    background-image: image-url('IMG_9067.JPG');
+    background-size: cover;
+    height: 600px;
+    display: flex;
+
+    .hero-text {
+      background-color: $blue;
+      color: #fff;
+      font-family: Lato;
+      height: 300px;
+      clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+      flex: 1;
+      align-self: flex-end;
+
+      .hero-text-holder {
+        padding: 25px;
+        margin-top: 50px;
+        margin-left: 50px;
+        width: 50%;
+        line-height: 30px;
+
+        h1 {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  form#contact-form {
+    width: 500px;
+    margin: auto;
+    padding: 50px 0;
+    .form-line {
+      width: 100%;
+      line-height: 50px;
+      label, input, textarea {
+        width: 100%;
+      }
+    }
+    #contact-button {
+      @include donate-button;
+      width: 200px;
+      margin: auto;
+      display: block;
     }
   }
 }

@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/pages/for-applicants' => 'pages#forApplicants'
   get '/pages/contact' => 'pages#contact'
   get '/scholars/index' => 'scholars#index'
+  post '/contact' => 'pages#sendmessage'
 end
